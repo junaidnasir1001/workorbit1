@@ -1,0 +1,35 @@
+/vendor/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+storage/*.key
+.env
+Homestead.yaml
+Homestead.json
+/.vagrant
+*.zip
+*.xsd
+*.xml
+*.xml
+*.jpg
+public/documents/staff_vetting/1635351041-document.xlsx
+*.doc
+package-lock.json
+public/documents/staff/vetting/kylie-mendoza/1636670531-document.png
+public/documents/staff/vetting/kylie-mendoza/1636670534-document.png
+public/documents/staff/vetting/kylie-mendoza/1636670536-document.png
+public/documents/staff/vetting/kylie-mendoza/1636670539-document.png
+public/documents/staff/vetting/kylie-mendoza/1636670541-document.png
+public/documents/staff/vetting/kylie-mendoza/1636670557-document.png
+public/documents/staff/vetting/kylie-mendoza/1636670575-document.png
+public/documents/staff/vetting/kylie-mendoza/1636726389-document.webp
+*.png
+.idea/*
