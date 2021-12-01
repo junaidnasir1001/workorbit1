@@ -50,6 +50,8 @@ class SiteContactPersonController extends Controller
             $contact_person->email = $request->add_contact_person_email;
             $contact_person->address = $request->add_contact_person_address;
             $contact_person->postal_code = $request->add_contact_person_postal_code;
+            print_r(json_encode($site->contact_person()));
+            exit();
             $site->contact_person()->save($contact_person);
             $response = array('status' => 'success', "message" => "Data Added Successfully");
             return response()->json($response, 200);
@@ -90,6 +92,9 @@ class SiteContactPersonController extends Controller
      */
     public function update(Request $request, Staff $staff, ContactPerson $contact_person)
     {
+        print_r(11);
+        exit();
+
         try {
             $contact_person->title = $request->edit_contact_person_title;
             $contact_person->name = $request->edit_contact_person_name;

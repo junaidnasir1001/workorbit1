@@ -93,7 +93,7 @@
                                             </div>
                                         </div>
                                     </form>
-                                @endif    
+                                @endif
                                 </div>
                             </div>
                             @if(hasPermission('site_note_list'))

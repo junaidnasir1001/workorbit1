@@ -13,7 +13,6 @@
                         class="fa fa-plus"></i> Add Staff</a>
                         @endif
             </h3>
-
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                     <i class="fas fa-minus"></i>

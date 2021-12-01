@@ -36,7 +36,7 @@
 
                 </tbody>
             </table>
-        @endif    
+        @endif
         </div>
 
     </div>

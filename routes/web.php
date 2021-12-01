@@ -22,11 +22,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['guest:adm
 
     Route::get('/login', [\App\Http\Controllers\Admin\Auth\LoginController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [\App\Http\Controllers\Admin\Auth\LoginController::class, 'checkLogin'])->name('login.check');
-    Route::post('/logout', [\App\Http\Controllers\Admin\Auth\LoginController::class, 'adminLogout'])->name('logout');
 
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth:admin']], function () {
+
+    Route::post('/logout', [\App\Http\Controllers\Admin\Auth\LoginController::class, 'adminLogout'])->name('logout');
 
     Route::get('/', [\App\Http\Controllers\Admin\AdminDashboardController::class, 'index'])->name('home');
     Route::resource('client', \App\Http\Controllers\Admin\ClientsController::class);

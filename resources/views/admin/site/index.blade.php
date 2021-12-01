@@ -81,7 +81,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="add_address" class="">Address</label>
+                                    <label for="add_address" class="">Address11</label>
                                     <input type="text" class="form-control" placeholder="Enter Address"
                                            name="add_address"
                                            id="add_address">
@@ -299,7 +299,7 @@
                     },
                     add_address: {
                         required: false,
-                        maxlength: 50
+                        maxlength: 150
                     },
                     add_finish_date: {
                         required: false,
