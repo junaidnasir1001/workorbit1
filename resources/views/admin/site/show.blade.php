@@ -174,7 +174,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="edit_address" class="">Address</label>
-                                    <input type="text" class="form-control" placeholder="Enter Address"
+                                    <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                            name="edit_address"
                                            id="edit_address" value="{{$site->address}}">
                                 </div>
@@ -238,7 +238,7 @@
                     },
                     edit_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                     edit_postal_code: {
                         required: false,
@@ -420,7 +420,7 @@
                     },
                     add_contact_person_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                     add_contact_person_postal_code: {
                         required: false,
@@ -501,7 +501,7 @@
                     },
                     edit_contact_person_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                     edit_contact_person_postal_code: {
                         required: false,

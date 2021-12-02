@@ -45,7 +45,6 @@
         <!-- /.card-body -->
     </div>
     <!-- /.card -->
-
     <!--Add Modal -->
     <form action="{{route('admin.client.store')}}" method="post" id="add_form">
         @csrf
@@ -72,11 +71,10 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_phone_number" class="">Phone Number</label>
-                                    <input  type="number" class="form-control EnterOnlyNumber" placeholder="Enter Phone Number"
+                                    <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter Phone Number"
                                            name="add_phone_number"
                                            id="add_phone_number"
-                                           maxlength="31"
-                                            required>
+                                           maxlength="31">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -249,9 +247,10 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="edit_address" class="">Address</label>
-                                    <input maxlength="51" type="text" class="form-control" placeholder="Enter Address"
+                                    <input type="text" class="form-control" placeholder="Enter Address"
                                            name="edit_address"
-                                           id="edit_address">
+                                           id="edit_address"
+                                            maxlength="101">
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -259,7 +258,7 @@
                                     <label for="edit_postal_code" class="">Zip Code/Postal Code</label>
                                     <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter Postal Code"
                                            name="edit_postal_code"
-                                           maxlength="15"
+                                           maxlength="31"
                                            id="edit_postal_code">
                                 </div>
                             </div>
@@ -438,7 +437,7 @@
                     },
                     edit_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                     edit_profile_path: {
                         required: false,

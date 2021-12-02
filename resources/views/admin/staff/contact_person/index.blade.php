@@ -107,7 +107,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="add_contact_person_address" class="">Address</label>
-                                <input maxlength="51" type="text" class="form-control" placeholder="Enter Address"
+                                <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                        name="add_contact_person_address"
                                        id="add_contact_person_address">
                             </div>
@@ -195,7 +195,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="edit_contact_person_address" class="">Address</label>
-                                <input type="text" class="form-control"
+                                <input maxlength="101" type="text" class="form-control"
                                        name="edit_contact_person_address"
                                        id="edit_contact_person_address">
                             </div>

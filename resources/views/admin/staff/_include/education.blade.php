@@ -164,7 +164,7 @@
                             <div class="form-group">
                                 <label for="edit_education_city" class="">City</label>
                                 <input maxlength="31" type="text" class="form-control entertxtOnly"
-                                       name="add_education_city"
+                                       name="edit_education_city"
                                        id="edit_education_city" placeholder="Enter City">
                             </div>
                         </div>

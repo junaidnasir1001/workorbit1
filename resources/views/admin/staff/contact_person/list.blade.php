@@ -16,7 +16,7 @@
                         data-job-title="{{$contact->job_title}}"
                         data-phone-number="{{$contact->phone_number}}"
                         data-email="{{$contact->email}}"
-                        data-address="{{$contact->email}}"
+                        data-address="{{$contact->address}}"
                         data-postal-code="{{$contact->postal_code}}"
                         data-id="{{$contact->id}}"
                 ><i class='far fa-edit'></i>

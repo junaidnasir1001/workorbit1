@@ -74,15 +74,15 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="add_name" class="required">Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Type Name"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter Type Name"
                                            name="add_name"
                                            id="add_name">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="add_address" class="">Address11</label>
-                                    <input type="text" class="form-control" placeholder="Enter Address"
+                                    <label for="add_address" class="">Address</label>
+                                    <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                            name="add_address"
                                            id="add_address">
                                 </div>
@@ -90,9 +90,9 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_postal_code" class="">Postal Code/Zip Code</label>
-                                    <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter Postal Code"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Postal Code"
                                            name="add_postal_code"
-                                           id="add_postal_code" maxlength="31">
+                                           id="add_postal_code">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -176,7 +176,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="edit_name" class="required">Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Name"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter Name"
                                            name="edit_name"
                                            id="edit_name">
                                 </div>
@@ -184,7 +184,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="edit_address" class="">Address</label>
-                                    <input type="text" class="form-control" placeholder="Enter Address"
+                                    <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                            name="edit_address"
                                            id="edit_address">
                                 </div>
@@ -299,7 +299,7 @@
                     },
                     add_address: {
                         required: false,
-                        maxlength: 150
+                        maxlength: 100,
                     },
                     add_finish_date: {
                         required: false,
@@ -385,7 +385,7 @@
                     },
                     edit_address: {
                         required: false,
-                        maxlength: 50
+                        maxlength: 100,
                     },
                     edit_city: {
                         required: false,

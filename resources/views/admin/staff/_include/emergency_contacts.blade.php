@@ -86,7 +86,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_em_address" class="">address</label>
-                                <input maxlength="51" type="text" class="form-control" placeholder="Enter Address"
+                                <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                        name="add_em_address"
                                        id="add_em_address">
                             </div>
@@ -111,7 +111,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addModalLabel">Edit Site Type</h5>
+                    <h5 class="modal-title" id="addModalLabel">Edit Emergency Contact</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -150,10 +150,10 @@
                                        id="edit_em_postal_code">
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-group">
                                 <label for="edit_em_address" class="">Address</label>
-                                <input maxlength="51" type="text" class="form-control" placeholder="Enter Address"
+                                <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                        name="edit_em_address"
                                        id="edit_em_address">
                             </div>

@@ -683,7 +683,7 @@
                     },
                     add_em_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
 
                 },
@@ -756,7 +756,7 @@
                     },
                     edit_em_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
 
                 },
@@ -2182,11 +2182,11 @@
                     },
                     add_contact_person_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                     add_contact_person_postal_code: {
                         required: false,
-                        email: true,
+                        maxlength: 30,
                     },
 
                 },
@@ -2259,11 +2259,11 @@
                     },
                     edit_contact_person_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                     edit_contact_person_postal_code: {
                         required: false,
-                        email: true,
+                        maxlength: 30,
                     },
                 },
                 messages: {},

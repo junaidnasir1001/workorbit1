@@ -28,7 +28,7 @@
                     <th>Phone Number</th>
                     <th>Email</th>
                     <th>Address</th>
-                    <th>Zip Code</th>
+                    <th>Zip Code/Postal Code</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -36,7 +36,7 @@
 
                 </tbody>
             </table>
-        @endif    
+        @endif
         </div>
 
     </div>
@@ -110,15 +110,15 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="add_contact_person_address" class="">Address</label>
-                                <input type="email" class="form-control"
-                                       name="add_contact_person_address" placeholder="Enter Address"
+                                <input maxlength="101" type="text" class="form-control"
+                                       name="add_contact_person_address"
                                        id="add_contact_person_address">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="add_contact_person_postal_code" class="">Zip Code/Postal Code</label>
-                                <input type="number" class="form-control EnterOnlyNumber"
+                                <input type="text" class="form-control EnterOnlyNumber"
                                        name="add_contact_person_postal_code"
                                        maxlength="31"
                                        id="add_contact_person_postal_code">
@@ -199,7 +199,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="edit_contact_person_address" class="">Address</label>
-                                <input type="email" class="form-control"
+                                <input maxlength="101" type="text" class="form-control"
                                        name="edit_contact_person_address" placeholder="Enter Address"
                                        id="edit_contact_person_address">
                             </div>
