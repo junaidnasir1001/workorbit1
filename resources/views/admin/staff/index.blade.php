@@ -8,10 +8,10 @@
             <h3 class="card-title">Staff List
                 {{-- <a href="javascript:;" data-toggle="modal" data-target="#add_modal"  style="font-size: 24px"><i class="fa fa-plus"></i></a> --}}
                 @if(hasPermission('add_staff'))
-                <a href="javascript:;" class="btn btn-outline-primary btn-md btn-flat ml-2" data-toggle="modal"
-                   data-target="#add_modal"><i
-                        class="fa fa-plus"></i> Add Staff</a>
-                        @endif
+                    <a href="javascript:;" class="btn btn-outline-primary btn-md btn-flat ml-2" data-toggle="modal"
+                       data-target="#add_modal"><i
+                            class="fa fa-plus"></i> Add Staff</a>
+                @endif
             </h3>
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -20,26 +20,26 @@
             </div>
         </div>
         <div class="card-body">
-        @if(hasPermission('staff_list'))
-            <table id="dt" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Profile</th>
-                    <th>Staff Number</th>
-                    <th>Subcontractor</th>
-                    <th>designation</th>
-                    <th>Phone Number</th>
-                    <th>Mobile Number</th>
-                    <th>Email</th>
-                    <th>Pay Rate</th>
-                    <th>SIA Number</th>
-                    <th>Status</th>
-                    <th></th>
-                </tr>
-                </thead>
-            </table>
+            @if(hasPermission('staff_list'))
+                <table id="dt" class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Profile</th>
+                        <th>Staff Number</th>
+                        <th>Subcontractor</th>
+                        <th>designation</th>
+                        <th>Phone Number</th>
+                        <th>Mobile Number</th>
+                        <th>Email</th>
+                        <th>Pay Rate</th>
+                        <th>SIA Number</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                </table>
             @endif
         </div>
         <!-- /.card-body -->
@@ -64,7 +64,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="add_first_name" class="required">First Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter First Name"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                           placeholder="Enter First Name"
                                            name="add_first_name"
                                            id="add_first_name">
                                 </div>
@@ -72,7 +73,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="add_last_name" class="required">Last Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Last Name"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                           placeholder="Enter Last Name"
                                            name="add_last_name"
                                            id="add_last_name">
                                 </div>
@@ -80,7 +82,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="add_staff_number" class="">Staff Number</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Staff Number"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Staff Number"
                                            name="add_staff_number"
                                            id="add_staff_number">
                                 </div>
@@ -112,7 +115,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="add_phone_number" class="">Phone Number</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Phone Number"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Phone Number"
                                            name="add_phone_number"
                                            id="add_phone_number">
                                 </div>
@@ -120,7 +124,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_mobile_number" class="">Mobile Number</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Mobile Number"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Mobile Number"
                                            name="add_mobile_number"
                                            id="add_mobile_number">
                                 </div>
@@ -136,7 +141,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_pay_rate" class="">Pay Rate</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Pay Rate"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Pay Rate"
                                            name="add_pay_rate"
                                            id="add_pay_rate">
                                 </div>
@@ -144,7 +150,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_sia_number" class="">SIA Number</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter SIA Number"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter SIA Number"
                                            name="add_sia_number"
                                            id="add_sia_number">
                                 </div>
@@ -194,7 +201,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_first_name" class="required">First Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter First Name"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                           placeholder="Enter First Name"
                                            name="edit_first_name"
                                            id="edit_first_name">
                                 </div>
@@ -202,7 +210,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_last_name" class="required">Last Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Last Name"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                           placeholder="Enter Last Name"
                                            name="edit_last_name"
                                            id="edit_last_name">
                                 </div>
@@ -210,7 +219,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_staff_number" class="">Staff Number</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Staff Number"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Staff Number"
                                            name="edit_staff_number"
                                            id="edit_staff_number">
                                 </div>
@@ -242,7 +252,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_phone_number" class="">Phone Number</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Phone Number"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Phone Number"
                                            name="edit_phone_number"
                                            id="edit_phone_number">
                                 </div>
@@ -250,7 +261,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_mobile_number" class="">Mobile Number</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Mobile Number"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Mobile Number"
                                            name="edit_mobile_number"
                                            id="edit_mobile_number">
                                 </div>
@@ -266,7 +278,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_pay_rate" class="">Pay Rate</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Pay Rate"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Pay Rate"
                                            name="edit_pay_rate"
                                            id="edit_pay_rate">
                                 </div>
@@ -274,7 +287,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_sia_number" class="">SIA Number</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter SIA Number"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter SIA Number"
                                            name="edit_sia_number"
                                            id="edit_sia_number">
                                 </div>
@@ -362,8 +376,7 @@
                         maxlength: 30,
                     },
                     add_designation_id: {
-                        required: false,
-                        maxlength: 30,
+                        required: true,
                     },
                     add_profile_path: {
                         required: false,
@@ -452,8 +465,7 @@
                         maxlength: 30,
                     },
                     add_designation_id: {
-                        required: false,
-                        maxlength: 30,
+                        required: true,
                     },
                     add_profile_path: {
                         required: false,
@@ -606,8 +618,8 @@
             })
         });
         ///////////// Enter Only text //////////////
-        $(document).ready(function (){
-        $(".entertxtOnly").keypress(function (e) {
+        $(document).ready(function () {
+            $(".entertxtOnly").keypress(function (e) {
                 var k;
                 document.all ? k = e.keyCode : k = e.which;
                 return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32);
@@ -615,15 +627,15 @@
         });
         ///////////// Enter Only Number //////////////
         $(document).ready(function () {
-          //called when key is pressed in textbox
-          $(".EnterOnlyNumber").keypress(function (e) {
-             //if the letter is not digit then display error and don't type anything
-             if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-                //display error message
-                $("#errmsg").html("Digits Only").show().fadeOut("slow");
-                       return false;
-            }
-           });
+            //called when key is pressed in textbox
+            $(".EnterOnlyNumber").keypress(function (e) {
+                //if the letter is not digit then display error and don't type anything
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    //display error message
+                    $("#errmsg").html("Digits Only").show().fadeOut("slow");
+                    return false;
+                }
+            });
         });
     </script>
 

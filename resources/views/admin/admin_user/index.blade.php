@@ -57,7 +57,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="add_name" class="required">Name</label>
-                                    <input type="text" class="form-control entertxtOnly" placeholder="Enter Name"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Name"
                                            name="add_name"
                                            id="add_name">
                                 </div>
@@ -126,7 +126,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="edit_name" class="required">Name</label>
-                                    <input type="text" class="form-control entertxtOnly" placeholder="Enter Name"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Name"
                                            name="edit_name"
                                            id="edit_name">
                                 </div>
@@ -266,14 +266,17 @@
 
             $('#edit_form').validate({
                 rules: {
-                    add_name: {
+                    edit_name: {
                         required: true,
                         maxlength: 30
                     },
-                    add_email: {
+                    edit_email: {
                         required: true,
                         email: true
                     },
+                    edit_type: {
+                        required: true,
+                    }
                 },
                 messages: {},
                 errorElement: 'small',
@@ -329,7 +332,7 @@
             $('#edit_name').val(data.name);
             $('#edit_email').val(data.email);
             $('#edit_type').val(data.type);
-            
+
 
             $('#hidden_id').val(data.id);
             $('#edit_modal').modal('show');

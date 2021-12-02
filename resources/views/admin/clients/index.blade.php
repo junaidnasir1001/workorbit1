@@ -185,7 +185,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_name" class="required">Name</label>
-                                    <input maxlength="30" type="text" class="form-control entertxtOnly" placeholder="Client name"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Client name"
                                            name="edit_name"
                                            id="edit_name">
                                 </div>
@@ -195,7 +195,7 @@
                                     <label for="edit_phone_number" class="">Phone Number</label>
                                     <input  type="text" class="form-control EnterOnlyNumber" placeholder="Enter Phone Number"
                                            name="edit_phone_number"
-                                           maxlength="30"
+                                           maxlength="31"
                                            id="edit_phone_number">
                                 </div>
                             </div>
@@ -204,7 +204,7 @@
                                     <label for="edit_mobile_number" class="">Mobile Number</label>
                                     <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter Mobile Number"
                                            name="edit_mobile_number"
-                                           maxlength="30"
+                                           maxlength="31"
                                            id="edit_mobile_number">
                                 </div>
                             </div>
@@ -221,7 +221,7 @@
                                     <label for="edit_registration_number" class="">Registration Number</label>
                                     <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter Registration Number"
                                            name="edit_registration_number"
-                                           maxlength="30"
+                                           maxlength="31"
                                            id="edit_registration_number">
                                 </div>
                             </div>
@@ -453,6 +453,10 @@
                         maxlength: 30,
                     },
                     edit_phone_number: {
+                        required: false,
+                        maxlength: 30,
+                    },
+                    edit_mobile_number:{
                         required: false,
                         maxlength: 30,
                     },

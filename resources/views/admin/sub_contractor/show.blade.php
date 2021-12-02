@@ -154,7 +154,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_name" class="required">Name</label>
-                                    <input type="text" class="form-control entertxtOnly" placeholder="Client name"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Client name"
                                            name="edit_name"
                                            id="edit_name" value="{{$sub_contractor->name}}">
                                 </div>
@@ -216,7 +216,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="edit_address" class="">Address</label>
-                                    <input type="text" class="form-control" placeholder="Enter Address"
+                                    <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                            name="edit_address"
                                            id="edit_address" value="{{$sub_contractor->address}}">
                                 </div>
@@ -232,7 +232,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_city" class="">City</label>
-                                    <input type="text" class="form-control entertxtOnly" placeholder="Enter City"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter City"
                                            name="edit_city"
                                            id="edit_city" value="{{$sub_contractor->city}}">
                                 </div>
@@ -240,7 +240,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_country" class="">Country</label>
-                                    <input type="text" class="form-control entertxtOnly" placeholder="Enter Country"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Country"
                                            name="edit_country"
                                            id="edit_country" value="{{$sub_contractor->country}}">
                                 </div>
@@ -324,7 +324,7 @@
                     },
                     edit_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                     edit_postal_code: {
                         required: false,

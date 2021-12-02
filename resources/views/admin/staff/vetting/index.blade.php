@@ -79,7 +79,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_note" class="">Note</label>
-                                <input type="text" class="form-control" placeholder="Enter Note"
+                                <input maxlength="101" type="text" class="form-control" placeholder="Enter Note"
                                        name="add_note"
                                        id="add_note">
                             </div>
@@ -145,7 +145,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="edit_staff_vetting_note" class="">Note</label>
-                                <input type="text" class="form-control" placeholder="Enter Note"
+                                <input maxlength="101" type="text" class="form-control" placeholder="Enter Note"
                                        name="edit_staff_vetting_note"
                                        id="edit_staff_vetting_note">
                             </div>

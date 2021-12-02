@@ -2,11 +2,11 @@
 <div class="card card-info">
     <div class="card-header">
         <h3 class="card-title">Personal References List
-        @if(hasPermission('add_staff_personal_references'))
-            <a href="javascript:;" class="btn btn-primary btn-md btn-flat ml-2" data-toggle="modal"
-               data-target="#add_personal_references_modal"><i
-                    class="fa fa-plus"></i> Add Personal References Data</a>
-                    @endif
+            @if(hasPermission('add_staff_personal_references'))
+                <a href="javascript:;" class="btn btn-primary btn-md btn-flat ml-2" data-toggle="modal"
+                   data-target="#add_personal_references_modal"><i
+                        class="fa fa-plus"></i> Add Personal References Data</a>
+            @endif
         </h3>
 
         <div class="card-tools">
@@ -16,23 +16,23 @@
         </div>
     </div>
     <div class="card-body">
-    @if(hasPermission('staff_personal_references_list'))
-        <table id="personal_references_dt" class="table table-sm table-bordered table-striped">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Address</th>
-                <th>Zip Code/Postal Code</th>
-                <th>Phone</th>
-                <th>Occupation</th>
-                <th>How Long Know</th>
-                <th>Relation</th>
-                <th></th>
-            </tr>
-            </thead>
-        </table>
+        @if(hasPermission('staff_personal_references_list'))
+            <table id="personal_references_dt" class="table table-sm table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Zip Code/Postal Code</th>
+                    <th>Phone</th>
+                    <th>Occupation</th>
+                    <th>How Long Know</th>
+                    <th>Relation</th>
+                    <th></th>
+                </tr>
+                </thead>
+            </table>
         @endif
     </div>
     <!-- /.card-body -->
@@ -58,7 +58,8 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_personal_references_name" class="required">Name</label>
-                                <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Name"
+                                <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                       placeholder="Enter Name"
                                        name="add_personal_references_name"
                                        id="add_personal_references_name">
                             </div>
@@ -74,7 +75,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_personal_references_address" class="">Address</label>
-                                <input maxlength="51" type="text" class="form-control" placeholder="Enter Address"
+                                <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                        name="add_personal_references_address"
                                        id="add_personal_references_address">
                             </div>
@@ -140,7 +141,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addModalLabel">Edit Site Type</h5>
+                    <h5 class="modal-title" id="addModalLabel">Edit Personal References</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -150,7 +151,8 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="edit_personal_references_name" class="required">name</label>
-                                <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Name"
+                                <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                       placeholder="Enter Name"
                                        name="edit_personal_references_name"
                                        id="edit_personal_references_name">
                             </div>
@@ -166,7 +168,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="edit_personal_references_address" class="">Address</label>
-                                <input maxlength="51" type="text" class="form-control" placeholder="Enter Address"
+                                <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                        name="edit_personal_references_address"
                                        id="edit_personal_references_address">
                             </div>

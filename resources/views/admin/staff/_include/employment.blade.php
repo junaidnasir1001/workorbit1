@@ -75,7 +75,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_employment_address" class="">Address</label>
-                                <input maxlength="51" type="text" class="form-control" placeholder="Enter Address"
+                                <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                        name="add_employment_address"
                                        id="add_employment_address">
                             </div>
@@ -182,7 +182,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="edit_employment_address" class="">Address</label>
-                                <input maxlength="51" type="text" class="form-control" placeholder="Enter Address"
+                                <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                        name="edit_employment_address"
                                        id="edit_employment_address">
                             </div>

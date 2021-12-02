@@ -321,8 +321,7 @@
                         maxlength: 30,
                     },
                     add_designation_id: {
-                        required: false,
-                        maxlength: 30,
+                        required: true,
                     },
                     add_profile_path: {
                         required: false,
@@ -1334,7 +1333,7 @@
                     },
                     add_employment_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                     add_employment_postal_code: {
                         required: false,
@@ -1418,7 +1417,7 @@
                     },
                     edit_employment_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                     edit_employment_postal_code: {
                         required: false,
@@ -1861,7 +1860,7 @@
                     },
                     add_personal_references_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                     add_personal_postal_code: {
                         required: false,
@@ -1945,7 +1944,7 @@
                     },
                     edit_personal_references_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                     edit_personal_postal_code: {
                         required: false,
@@ -2614,7 +2613,7 @@
                     add_status: "required",
                     add_note: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                 },
                 messages: {},
@@ -2666,14 +2665,14 @@
                 });
             });
 
-            $('#edit_contact_person_form').validate({
+            $('#edit_staff_vetting_form').validate({
                 rules: {
-                    edit_vetting_id: "required",
-                    edit_document_file_path: "required",
-                    edit_status: "required",
-                    add_note: {
+                    edit_staff_vetting_id: "required",
+                    edit_staff_vetting_file_path: "required",
+                    edit_staff_vetting_status: "required",
+                    edit_staff_vetting_note: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                 },
                 messages: {},

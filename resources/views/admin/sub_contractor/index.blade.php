@@ -8,10 +8,10 @@
             <h3 class="card-title">Subcontractor List
                 {{-- <a href="javascript:;" data-toggle="modal" data-target="#add_modal"  style="font-size: 24px"><i class="fa fa-plus"></i></a> --}}
                 @if(hasPermission('add_subcontractor'))
-                <a href="javascript:;" class="btn btn-outline-primary btn-md btn-flat ml-2" data-toggle="modal"
-                   data-target="#add_modal"><i
-                        class="fa fa-plus"></i> Add Subcontractor</a>
-                        @endif
+                    <a href="javascript:;" class="btn btn-outline-primary btn-md btn-flat ml-2" data-toggle="modal"
+                       data-target="#add_modal"><i
+                            class="fa fa-plus"></i> Add Subcontractor</a>
+                @endif
             </h3>
 
             <div class="card-tools">
@@ -21,28 +21,28 @@
             </div>
         </div>
         <div class="card-body">
-        @if(hasPermission('subcontractor_list'))
-            <table id="dt" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Profile</th>
-                    <th>Phone Number</th>
-                    <th>Mobile Number</th>
-                    <th>Email</th>
-                    <th>Registration Number</th>
-                    <th>VAT Number</th>
-                    <th>Postal Code/Zip Code</th>
-                    <th>City</th>
-                    <th>Country</th>
-                    <th>Pay Rate</th>
-                    <th>Website</th>
-                    <th>Status</th>
-                    <th></th>
-                </tr>
-                </thead>
-            </table>
+            @if(hasPermission('subcontractor_list'))
+                <table id="dt" class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Profile</th>
+                        <th>Phone Number</th>
+                        <th>Mobile Number</th>
+                        <th>Email</th>
+                        <th>Registration Number</th>
+                        <th>VAT Number</th>
+                        <th>Postal Code/Zip Code</th>
+                        <th>City</th>
+                        <th>Country</th>
+                        <th>Pay Rate</th>
+                        <th>Website</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                </table>
             @endif
         </div>
         <!-- /.card-body -->
@@ -67,7 +67,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_name" class="required">Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Subcontractor name"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                           placeholder="Subcontractor name"
                                            name="add_name"
                                            id="add_name">
                                 </div>
@@ -75,7 +76,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_phone_number" class="">Phone Number</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Phone Number"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Phone Number"
                                            name="add_phone_number"
                                            id="add_phone_number">
                                 </div>
@@ -83,7 +85,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_mobile_number" class="">Mobile Number</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Mobile Number"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Mobile Number"
                                            name="add_mobile_number"
                                            id="add_mobile_number">
                                 </div>
@@ -99,7 +102,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_registration_number" class="">Registration Number</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Registration Number"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Registration Number"
                                            name="add_registration_number"
                                            id="add_registration_number">
                                 </div>
@@ -107,7 +111,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_vat_number" class="">VAT Number</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter VAT Number"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter VAT Number"
                                            name="add_vat_number"
                                            id="add_vat_number">
                                 </div>
@@ -124,7 +129,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="add_address" class="">Address</label>
-                                    <input type="text" class="form-control" placeholder="Enter Address"
+                                    <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                            name="add_address"
                                            id="add_address">
                                 </div>
@@ -132,7 +137,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="add_postal_code" class="">Postal Code/Zip Code</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Postal Code"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Postal Code"
                                            name="add_postal_code"
                                            id="add_postal_code">
                                 </div>
@@ -140,7 +146,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="add_city" class="">City</label>
-                                    <input type="text" class="form-control entertxtOnly" placeholder="Enter City"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter City"
                                            name="add_city"
                                            id="add_city">
                                 </div>
@@ -148,7 +154,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="add_country" class="">Country</label>
-                                    <input type="text" class="form-control entertxtOnly" placeholder="Enter Country"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Country"
                                            name="add_country"
                                            id="add_country">
                                 </div>
@@ -164,7 +170,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_pay_rate" class="">Pay Rate</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Pay Rate"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Pay Rate"
                                            name="add_pay_rate"
                                            id="add_pay_rate">
                                 </div>
@@ -206,7 +213,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_name" class="required">Name</label>
-                                    <input type="text" class="form-control entertxtOnly" placeholder="Client name"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Client name"
                                            name="edit_name"
                                            id="edit_name">
                                 </div>
@@ -214,7 +221,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_phone_number" class="">Phone Number</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Phone Number"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Phone Number"
                                            name="edit_phone_number"
                                            id="edit_phone_number">
                                 </div>
@@ -222,7 +230,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_mobile_number" class="">Mobile Number</label>
-                                    <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter Mobile Number"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Mobile Number"
                                            name="edit_mobile_number"
                                            id="edit_mobile_number">
                                 </div>
@@ -238,7 +247,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_registration_number" class="">Registration Number</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Registration Number"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Registration Number"
                                            name="edit_registration_number"
                                            id="edit_registration_number">
                                 </div>
@@ -246,7 +256,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_vat_number" class="">VAT Number</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter VAT Number"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter VAT Number"
                                            name="edit_vat_number"
                                            id="edit_vat_number">
                                 </div>
@@ -264,7 +275,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="edit_address" class="">Address</label>
-                                    <input type="text" class="form-control" placeholder="Enter Address"
+                                    <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                            name="edit_address"
                                            id="edit_address">
                                 </div>
@@ -272,7 +283,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_postal_code" class="">Postal Code/Zip Code</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Postal Code"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Postal Code"
                                            name="edit_postal_code"
                                            id="edit_postal_code">
                                 </div>
@@ -280,7 +292,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_city" class="">City</label>
-                                    <input type="text" class="form-control entertxtOnly" placeholder="Enter City"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter City"
                                            name="edit_city"
                                            id="edit_city">
                                 </div>
@@ -288,7 +300,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_country" class="">Country</label>
-                                    <input type="text" class="form-control entertxtOnly" placeholder="Enter Country"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Country"
                                            name="edit_country"
                                            id="edit_country">
                                 </div>
@@ -305,7 +317,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_pay_rate" class="">Pay Rate</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Pay Rate"
+                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                           placeholder="Enter Pay Rate"
                                            name="edit_pay_rate"
                                            id="edit_pay_rate">
                                 </div>
@@ -401,13 +414,13 @@
                         required: false,
                         maxlength: 30,
                     },
-                    add_vat_number:{
+                    add_vat_number: {
                         required: false,
                         maxlength: 30,
                     },
                     add_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                     add_postal_code: {
                         required: false,
@@ -502,13 +515,13 @@
                         required: false,
                         maxlength: 30,
                     },
-                    edit_vat_number:{
+                    edit_vat_number: {
                         required: false,
                         maxlength: 30,
                     },
                     edit_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                     edit_postal_code: {
                         required: false,
@@ -651,8 +664,8 @@
             })
         });
         ///////////// Enter Only text //////////////
-        $(document).ready(function (){
-        $(".entertxtOnly").keypress(function (e) {
+        $(document).ready(function () {
+            $(".entertxtOnly").keypress(function (e) {
                 var k;
                 document.all ? k = e.keyCode : k = e.which;
                 return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32);
@@ -660,15 +673,15 @@
         });
         ///////////// Enter Only Number //////////////
         $(document).ready(function () {
-          //called when key is pressed in textbox
-          $(".EnterOnlyNumber").keypress(function (e) {
-             //if the letter is not digit then display error and don't type anything
-             if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-                //display error message
-                $("#errmsg").html("Digits Only").show().fadeOut("slow");
-                       return false;
-            }
-           });
+            //called when key is pressed in textbox
+            $(".EnterOnlyNumber").keypress(function (e) {
+                //if the letter is not digit then display error and don't type anything
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    //display error message
+                    $("#errmsg").html("Digits Only").show().fadeOut("slow");
+                    return false;
+                }
+            });
         });
     </script>
 

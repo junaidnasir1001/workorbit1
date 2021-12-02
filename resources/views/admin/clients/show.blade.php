@@ -4,7 +4,7 @@
 @section('content')
     <!-- Default box -->
     <div class="row">
-        
+
             <div class="col-md-3">
 
                 <!-- Profile Image -->
@@ -53,14 +53,14 @@
                         @if(hasPermission('edit_client'))
                         <a href="javascript:;" class="btn btn-primary btn-block" data-toggle="modal"
                         data-target="#edit_modal"><b><i class='far fa-edit'></i></b></a>
-                        @endif 
+                        @endif
                     </div>
                     <!-- /.card-body -->
                 </div>
                 <!-- /.card -->
 
             </div>
-            
+
         <!-- /.col -->
         <div class="col-md-9">
             <div class="card">
@@ -105,7 +105,7 @@
                                             </div>
                                         </div>
                                     </form>
-                                @endif      
+                                @endif
                                 </div>
                             </div>
                             @if(hasPermission('client_note_list'))
@@ -158,7 +158,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_name" class="required">Name</label>
-                                    <input maxlength="30" type="text" class="form-control entertxtOnly" placeholder="Client name"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Client name"
                                            name="edit_name"
                                            id="edit_name" value="{{$client->name}}">
                                 </div>
@@ -223,7 +223,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="edit_address" class="">Address</label>
-                                    <input type="text" class="form-control" placeholder="Enter Address"
+                                    <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                            name="edit_address"
                                            id="edit_address" value="{{$client->address}}">
                                 </div>
@@ -240,7 +240,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_city" class="">City</label>
-                                    <input maxlength="30" type="text" class="form-control entertxtOnly" placeholder="Enter City"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter City"
                                            name="edit_city"
                                            id="edit_city" value="{{$client->city}}">
                                 </div>
@@ -248,7 +248,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_country" class="">Country</label>
-                                    <input maxlength="30" type="text" class="form-control entertxtOnly" placeholder="Enter Country"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Country"
                                            name="edit_country"
                                            id="edit_country" value="{{$client->country}}">
                                 </div>
@@ -286,7 +286,7 @@
                     },
                     edit_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                     edit_profile_path: {
                         required: false,

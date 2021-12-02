@@ -22,7 +22,7 @@
                                     id="address">{{$site->address}}</small></a>
                         </li>
                         <li class="list-group-item">
-                            <b>Postal Code</b> <a class="float-right"><small
+                            <b>Postal Code/Zip Code</b> <a class="float-right"><small
                                     id="postal_code">{{$site->postal_code}}</small></a>
                         </li>
                         <li class="list-group-item">

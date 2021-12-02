@@ -189,7 +189,6 @@
                             <span></span>
                             Sign In
                         </button>
-
                     </div>
                     <!-- /.col -->
                 </div>
