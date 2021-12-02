@@ -41,6 +41,7 @@ class SiteContactPersonController extends Controller
      */
     public function store(Request $request, Site $site)
     {
+
         try {
             $contact_person = new ContactPerson();
             $contact_person->title = $request->add_contact_person_title;
@@ -50,8 +51,6 @@ class SiteContactPersonController extends Controller
             $contact_person->email = $request->add_contact_person_email;
             $contact_person->address = $request->add_contact_person_address;
             $contact_person->postal_code = $request->add_contact_person_postal_code;
-            print_r(json_encode($site->contact_person()));
-            exit();
             $site->contact_person()->save($contact_person);
             $response = array('status' => 'success', "message" => "Data Added Successfully");
             return response()->json($response, 200);
@@ -90,12 +89,12 @@ class SiteContactPersonController extends Controller
      * @param int $id
      * @return \Illuminate\Http\JsonResponse
      */
-    public function update(Request $request, Staff $staff, ContactPerson $contact_person)
+    public function update(Request $request)
     {
-        print_r(11);
-        exit();
+
 
         try {
+            $contact_person = ContactPerson::find($request->hidden_contact_person_id);
             $contact_person->title = $request->edit_contact_person_title;
             $contact_person->name = $request->edit_contact_person_name;
             $contact_person->job_title = $request->edit_contact_person_job_title;
@@ -103,7 +102,6 @@ class SiteContactPersonController extends Controller
             $contact_person->email = $request->edit_contact_person_email;
             $contact_person->address = $request->edit_contact_person_address;
             $contact_person->postal_code = $request->edit_contact_person_postal_code;
-
             $contact_person->save();
             $response = array('status' => 'success', "message" => "Data Updated Successfully");
             return response()->json($response, 200);

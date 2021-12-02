@@ -59,6 +59,8 @@ class ClientsController extends Controller
             'country' => $request->add_country,
         ];
 
+
+
         if ($request->hasFile('add_profile_path')) {
             $file_name = time() . '-client' . '.' . $request->add_profile_path->extension();
             $filePath = '/profile/clients/';
@@ -69,6 +71,7 @@ class ClientsController extends Controller
         $exists = Clients::where('email', $request->add_email)
             ->orWhere('phone_number', $request->add_phone_number)
             ->orWhere('mobile_number', $request->add_mobile_number)
+            ->orWhere('registration_number', $request->add_registration_number)
             ->exists();
         if ($exists) {
             $response = array('status' => 'error', 'message' => 'Client Already existed');
