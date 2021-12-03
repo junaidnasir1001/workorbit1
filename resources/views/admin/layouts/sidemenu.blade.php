@@ -66,7 +66,7 @@
                             <li class="nav-item">
                                 <a href="{{route('admin.user_permission.index')}}" class="nav-link">
                                     <i class="far fa-users nav-icon"></i>
-                                    <p>User Permissions</p>
+                                    <p>Permissions</p>
                                 </a>
                             </li>
                         </ul>

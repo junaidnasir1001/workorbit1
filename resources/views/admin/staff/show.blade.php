@@ -3,6 +3,7 @@
 
 @section('content')
     <!-- Default box -->
+    <button style="margin-bottom: 20px;" onclick="window.history.back()" class="btn btn-secondary">Back</button>
     <div class="row">
         <div class="col-md-3">
             <!-- Profile Image -->
@@ -2668,7 +2669,7 @@
             $('#edit_staff_vetting_form').validate({
                 rules: {
                     edit_staff_vetting_id: "required",
-                    edit_staff_vetting_file_path: "required",
+
                     edit_staff_vetting_status: "required",
                     edit_staff_vetting_note: {
                         required: false,

@@ -3,6 +3,7 @@
 
 @section('content')
     <!-- Default box -->
+    <button style="margin-bottom: 20px;" onclick="window.history.back()" class="btn btn-secondary">Back</button>
     <div class="row">
         <div class="col-md-3">
 
@@ -144,7 +145,7 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addModalLabel">Edit Client</h5>
+                        <h5 class="modal-title" id="addModalLabel">Edit SubContractor</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -202,7 +203,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label>Client Profile</label>
+                                    <label>Subcontractor Profile</label>
                                     <div id="img_div">
                                         <img src="{{public_path($sub_contractor->profile_path)}}" alt="profile image"
                                              style="height: 200px" id="edit_profile_image">
@@ -249,8 +250,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_website" class="">Website</label>
-                                    <input type="text" class="form-control" placeholder="Enter Website"
-                                           name="edit_website"
+                                    <input type="url" class="form-control" placeholder="https://example.com"
+                                           name="edit_website" pattern="https?://.+"
                                            id="edit_website" value="{{$sub_contractor->website}}">
                                 </div>
                             </div>
@@ -340,7 +341,6 @@
                     },
                     edit_website: {
                         required: false,
-                        maxlength: 30,
                     },
                     edit_pay_rate: {
                         required: false,

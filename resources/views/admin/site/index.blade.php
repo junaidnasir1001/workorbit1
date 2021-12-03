@@ -29,7 +29,7 @@
                     <th>Client</th>
                     <th>Name</th>
                     <th>Address</th>
-                    <th>Postal Code</th>
+                    <th>Postal Code/Zip Code</th>
                     <th>City</th>
                     <th>Start Date</th>
                     <th>Finish Date</th>
@@ -122,17 +122,17 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_longitude" class="">Longitude</label>
-                                    <input type="number" class="form-control"
+                                    <input type="text" class="form-control"
                                            name="add_longitude" placeholder="Enter Longitude"
-                                           id="add_longitude" step="0.01">
+                                           id="add_longitude" pattern="-?\d{1,3}\.\d+">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_latitude" class="">latitude</label>
-                                    <input type="number" class="form-control"
+                                    <input type="text" class="form-control"
                                            name="add_latitude" placeholder="Enter Latitude"
-                                           id="add_latitude" step="0.01">
+                                           id="add_latitude" pattern="-?\d{1,3}\.\d+">
                                 </div>
                             </div>
                         </div>
@@ -224,17 +224,17 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_longitude" class="">Longitude</label>
-                                    <input type="number" class="form-control"
+                                    <input type="text" class="form-control"
                                            name="edit_longitude" placeholder="Enter Longitude"
-                                           id="edit_longitude" step="0.01">
+                                           id="edit_longitude" pattern="-?\d{1,3}\.\d+">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_latitude" class="">Latitude</label>
-                                    <input type="number" class="form-control"
+                                    <input type="text" class="form-control"
                                            name="edit_latitude" placeholder="Enter Latitude"
-                                           id="edit_latitude" step="0.01">
+                                           id="edit_latitude" pattern="-?\d{1,3}\.\d+">
                                 </div>
                             </div>
                         </div>
@@ -315,11 +315,9 @@
                     },
                     add_longitude: {
                         required: false,
-                        maxlength: 30,
                     },
                     add_latitude: {
                         required: false,
-                        maxlength: 30,
                     },
 
                 },
@@ -393,11 +391,9 @@
                     },
                     edit_longitude: {
                         required: false,
-                        maxlength: 30,
                     },
                     edit_latitude: {
                         required: false,
-                        maxlength: 30,
                     },
                 },
                 messages: {},

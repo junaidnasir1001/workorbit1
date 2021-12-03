@@ -75,7 +75,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="add_contact_person_name" class="required">Name</label>
-                                <input maxlength="30" type="text" class="form-control entertxtOnly" placeholder="Enter Name"
+                                <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Name"
                                        name="add_contact_person_name"
                                        id="add_contact_person_name">
                             </div>

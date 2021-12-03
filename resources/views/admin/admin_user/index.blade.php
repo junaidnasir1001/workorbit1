@@ -26,10 +26,11 @@
             <table id="dt" class="table table-bordered table-striped">
                 <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Type</th>
-                    <th></th>
+                    <th>Actions</th>
                 </tr>
                 </thead>
             </table>

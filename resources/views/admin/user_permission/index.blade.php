@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section('title', 'Users')
+@section('title', 'Permissions')
 
 @section('content')
     <!-- Default box -->
@@ -7,10 +7,10 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Add User
+            <h3 class="card-title">Add Permissions
                 {{-- <a href="javascript:;" data-toggle="modal" data-target="#add_modal"  style="font-size: 24px"><i class="fa fa-plus"></i></a> --}}
                 <a href="javascript:;" class="btn btn-outline-primary btn-md btn-flat ml-2" data-toggle="modal"
-                   data-target="#add_modal"><i class="fa fa-plus"></i> Add User</a>
+                   data-target="#add_modal"><i class="fa fa-plus"></i> Add Permissions</a>
             </h3>
 
             <div class="card-tools">
@@ -45,7 +45,7 @@
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addModalLabel">Add User</h5>
+                        <h5 class="modal-title" id="addModalLabel">Add Permissions</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

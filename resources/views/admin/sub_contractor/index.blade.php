@@ -162,8 +162,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_website" class="">Website</label>
-                                    <input type="text" class="form-control" placeholder="Enter Website"
-                                           name="add_website"
+                                    <input type="url" class="form-control" placeholder="https://example.com"
+                                           name="add_website" pattern="https?://.+"
                                            id="add_website">
                                 </div>
                             </div>
@@ -203,7 +203,7 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addModalLabel">Edit Client</h5>
+                        <h5 class="modal-title" id="addModalLabel">Edit Subcontractor</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -309,8 +309,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_website" class="">Website</label>
-                                    <input type="text" class="form-control" placeholder="Enter Website"
-                                           name="edit_website"
+                                    <input type="text" class="form-control" placeholder="https://example.com"
+                                           name="edit_website" pattern="https?://.+"
                                            id="edit_website">
                                 </div>
                             </div>
@@ -436,7 +436,6 @@
                     },
                     add_website: {
                         required: false,
-                        maxlength: 30,
                     },
                     add_pay_rate: {
                         required: false,
@@ -537,7 +536,6 @@
                     },
                     edit_website: {
                         required: false,
-                        maxlength: 30,
                     },
                     edit_pay_rate: {
                         required: false,

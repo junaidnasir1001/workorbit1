@@ -3,6 +3,7 @@
 
 @section('content')
     <!-- Default box -->
+    <button style="margin-bottom: 20px;" onclick="window.history.back()" class="btn btn-secondary">Back</button>
     <div class="row">
 
             <div class="col-md-3">
