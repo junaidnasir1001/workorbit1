@@ -117,7 +117,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="add_contact_person_postal_code" class="">Zip Code/Postal Code</label>
+                                <label for="add_contact_person_postal_code" class="">Zip Code/Postal Code1</label>
                                 <input type="text" class="form-control EnterOnlyNumber"
                                        name="add_contact_person_postal_code"
                                        maxlength="31"

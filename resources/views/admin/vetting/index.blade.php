@@ -5,7 +5,7 @@
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Site Type List
+            <h3 class="card-title">Vetting
                 {{-- <a href="javascript:;" data-toggle="modal" data-target="#add_modal"  style="font-size: 24px"><i class="fa fa-plus"></i></a> --}}
                 @if(hasPermission('add_staff_vetting'))
                 <a href="javascript:;" class="btn btn-outline-primary btn-md btn-flat ml-2" data-toggle="modal"
@@ -45,7 +45,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addModalLabel">Add Site Type</h5>
+                        <h5 class="modal-title" id="addModalLabel">Add Vetting</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -55,7 +55,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="add_name" class="required">Name</label>
-                                    <input type="text" class="form-control entertxtOnly" placeholder="Enter Type Name"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Type Name"
                                            name="add_name"
                                            id="add_name">
                                 </div>
@@ -80,7 +80,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addModalLabel">Edit Site Type</h5>
+                        <h5 class="modal-title" id="addModalLabel">Edit Vetting</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -90,7 +90,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="edit_name" class="required">Name</label>
-                                    <input type="text" class="form-control entertxtOnly" placeholder="Client name"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Client name"
                                            name="edit_name"
                                            id="edit_name">
                                 </div>

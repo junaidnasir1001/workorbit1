@@ -2464,7 +2464,7 @@
                 });
             });
 
-            $('#edit_contact_person_form').validate({
+            $('#edit_document_form').validate({
                 rules: {
                     edit_document_file_name: {
                         required: true,

@@ -58,7 +58,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_document_file_name" class="required">Title</label>
-                                <input type="text" class="form-control entertxtOnly" id="add_document_file_name"
+                                <input maxlength="31" type="text" class="form-control entertxtOnly" id="add_document_file_name"
                                        name="add_document_file_name">
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="edit_document_file_name" class="required">Title</label>
-                                <input type="text" class="form-control entertxtOnly" id="edit_document_file_name"
+                                <input maxlength="31" type="text" class="form-control entertxtOnly" id="edit_document_file_name"
                                        name="edit_document_file_name">
                             </div>
                         </div>

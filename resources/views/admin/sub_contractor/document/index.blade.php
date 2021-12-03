@@ -58,8 +58,8 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_document_file_name" class="required">Title</label>
-                                <input type="text" class="form-control entertxtOnly" id="add_document_file_name"
-                                       name="add_document_file_name">
+                                <input maxlength="31" type="text" class="form-control entertxtOnly" id="add_document_file_name"
+                                       name="add_document_file_name" placeholder="Enter Title">
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -90,7 +90,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addModalLabel">Edit Contact</h5>
+                    <h5 class="modal-title" id="addModalLabel">Edit Document</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -100,8 +100,8 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="edit_document_file_name" class="required">Title</label>
-                                <input type="text" class="form-control entertxtOnly" id="edit_document_file_name"
-                                       name="edit_document_file_name">
+                                <input maxlength="31" type="text" class="form-control entertxtOnly" id="edit_document_file_name"
+                                       name="edit_document_file_name" placeholder="Enter Title">
                             </div>
                         </div>
                         <div class="col-md-12">

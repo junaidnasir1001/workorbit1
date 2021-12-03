@@ -91,7 +91,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_contact_person_phone_number" class="">Phone Number</label>
-                                <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter Phone Number"
+                                <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Phone Number"
                                        name="add_contact_person_phone_number"
                                        id="add_contact_person_phone_number">
                             </div>

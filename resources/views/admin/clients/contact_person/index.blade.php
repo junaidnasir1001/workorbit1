@@ -83,7 +83,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_contact_person_job_title" class="">Job Title</label>
-                                <input type="text" class="form-control entertxtOnly" placeholder="Enter Job Title"
+                                <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Job Title"
                                        name="add_contact_person_job_title"
                                        id="add_contact_person_job_title">
                             </div>
@@ -91,7 +91,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_contact_person_phone_number" class="">Phone Number</label>
-                                <input type="text" class="form-control EnterOnlyNumber"
+                                <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter Phone Number"
                                        name="add_contact_person_phone_number"
                                        maxlength="31"
                                        id="add_contact_person_phone_number">
@@ -100,7 +100,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_contact_person_email" class="">Email</label>
-                                <input type="email" class="form-control"
+                                <input type="email" class="form-control" placeholder="Enter Email"
                                        name="add_contact_person_email"
                                        id="add_contact_person_email">
                             </div>
@@ -108,7 +108,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="add_contact_person_address" class="">Address</label>
-                                <input type="text" class="form-control"
+                                <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                        name="add_contact_person_address"
                                        id="add_contact_person_address">
                             </div>
@@ -116,7 +116,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="add_contact_person_postal_code" class="">Postal Code/Zip Code</label>
-                                <input type="text" class="form-control EnterOnlyNumber"
+                                <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter Postal Code/Zip Code"
                                        name="add_contact_person_postal_code"
                                        maxlength="31"
                                        id="add_contact_person_postal_code">
@@ -165,7 +165,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="edit_contact_person_name" class="required">Name</label>
-                                <input maxlength="30" type="text" class="form-control entertxtOnly" placeholder="Enter Name"
+                                <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Name"
                                        name="edit_contact_person_name"
                                        id="edit_contact_person_name">
                             </div>
@@ -175,23 +175,23 @@
                                 <label for="edit_contact_person_job_title" class="">Job Title</label>
                                 <input type="text" class="form-control entertxtOnly" placeholder="Enter Job Title"
                                        name="edit_contact_person_job_title"
-                                       maxlength="30"
+                                       maxlength="31"
                                        id="edit_contact_person_job_title">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="edit_contact_person_phone_number" class="">Phone Number</label>
-                                <input type="text" class="form-control EnterOnlyNumber"
+                                <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter Phone Number"
                                        name="edit_contact_person_phone_number"
-                                       maxlength="30"
+                                       maxlength="31"
                                        id="edit_contact_person_phone_number">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="edit_contact_person_email" class="">Email</label>
-                                <input type="email" class="form-control"
+                                <input type="email" class="form-control" placeholder="Enter Email"
                                        name="edit_contact_person_email"
                                        id="edit_contact_person_email">
                             </div>
@@ -199,7 +199,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="edit_contact_person_address" class="">Address</label>
-                                <input type="text" class="form-control"
+                                <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                        name="edit_contact_person_address"
                                        id="edit_contact_person_address">
                             </div>
@@ -207,7 +207,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="edit_contact_person_postal_code" class="">Postal Code/Zip Code</label>
-                                <input type="text" class="form-control EnterOnlyNumber"
+                                <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter Postal Code/Zip Code"
                                        name="edit_contact_person_postal_code"
                                        maxlength="31"
                                        id="edit_contact_person_postal_code">

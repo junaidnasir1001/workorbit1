@@ -511,11 +511,11 @@
                         maxlength: 30,
                     },
                     add_contact_person_title: {
-                        required: false,
+                        required: true,
                         maxlength: 30,
                     },
                     add_contact_person_name: {
-                        required: false,
+                        required: true,
                         maxlength: 30,
                     },
                     add_contact_person_email: {
@@ -528,7 +528,7 @@
                     },
                     add_contact_person_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                     add_contact_person_postal_code: {
                         required: false,
@@ -591,11 +591,11 @@
                         maxlength: 30,
                     },
                     edit_contact_person_title: {
-                        required: false,
+                        required: true,
                         maxlength: 30,
                     },
                     edit_contact_person_name: {
-                        required: false,
+                        required: true,
                         maxlength: 30,
                     },
                     edit_contact_person_email: {
@@ -608,7 +608,7 @@
                     },
                     edit_contact_person_address: {
                         required: false,
-                        maxlength: 50,
+                        maxlength: 100,
                     },
                     edit_contact_person_postal_code: {
                         required: false,
@@ -760,7 +760,7 @@
                 rules: {
                     add_document_file_name: {
                         required: true,
-                        maxlength: 255,
+                        maxlength: 30,
                     },
                     add_document_file_path: "required",
                 },
@@ -813,11 +813,11 @@
                 });
             });
 
-            $('#edit_contact_person_form').validate({
+            $('#edit_document_form').validate({
                 rules: {
                     edit_document_file_name: {
                         required: true,
-                        maxlength: 255,
+                        maxlength: 30,
                     },
                     edit_document_file_path: "required",
                 },
