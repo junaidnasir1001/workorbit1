@@ -2,7 +2,7 @@
 <div class="card card-info">
     <div class="card-header">
         <h3 class="card-title">Prefferd Staff
-            {{-- <a href="javascript:;" data-toggle="modal" data-target="#add_modal"  style="font-size: 24px"><i class="fa fa-plus"></i></a> --}}
+             <a href="javascript:;" data-toggle="modal" data-target="#add_modal"  style="font-size: 24px"><i class="fa fa-plus"></i></a>
         </h3>
 
         <div class="card-tools">

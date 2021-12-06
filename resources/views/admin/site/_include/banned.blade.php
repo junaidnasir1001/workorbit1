@@ -26,9 +26,9 @@
             <tbody>
             <tr>
                 <td>{{$loop->iteration}}</td>
-{{--                <td>{{$banned->staff->first_name}}</td>--}}
-{{--                <td>{{$banned->staff->staff_number}}</td>--}}
-{{--                <td>{{$banned->staff->email}}</td>--}}
+                <td>{{$banned->staff->first_name}}</td>
+                <td>{{$banned->staff->staff_number}}</td>
+                <td>{{$banned->staff->email}}</td>
             </tr>
             </tbody>
             @endforeach

@@ -593,6 +593,7 @@
         $(document).on('click', '.edit_data', function () {
             var data = $(this).data('params');
             console.log(data);
+            let url = "{{url('')}}"
             $('#edit_name').val(data.name);
             $('#edit_phone_number').val(data.phone_number);
             $('#edit_mobile_number').val(data.mobile_number);
@@ -604,7 +605,7 @@
             $('#edit_country').val(data.country);
             $('#edit_address').val(data.address);
             $('#old_profile_path').val(data.profile_path);
-            $('#img_div').html('<img src="' + data.profile_path + '" alt="" style="height: 200px"/>');
+            $('#img_div').html('<img src="' + url+data.profile_path + '" alt="" style="height: 200px"/>');
             $('#edit_website').val(data.website);
             $('#edit_pay_rate').val(data.pay_rate);
 

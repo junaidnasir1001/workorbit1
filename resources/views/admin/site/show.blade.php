@@ -6,7 +6,6 @@
     <button style="margin-bottom: 20px;" onclick="window.history.back()" class="btn btn-secondary">Back</button>
     <div class="row">
         <div class="col-md-3">
-
             <!-- Profile Image -->
             <div class="card card-primary card-outline">
                 <div class="card-body box-profile">
@@ -24,7 +23,7 @@
                         </li>
                         <li class="list-group-item">
                             <b>Client Name</b> <a class="float-right"><small
-                                    id="address">{{$site->client_id}}</small></a>
+                                    id="address">{{$site->name}}</small></a>
                         </li>
                         <li class="list-group-item">
                             <b>Postal Code/Zip Code</b> <a class="float-right"><small

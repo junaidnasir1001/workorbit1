@@ -137,6 +137,7 @@ class ShiftRepository extends BaseRepository
 
     public function updateShift(Request $request, Shift $shift)
     {
+
         $shift->site_id = $request->edit_site_id;
         $shift->site_type_id = $request->edit_site_type_id;
         $shift->time_in = $request->edit_time_in;
@@ -146,6 +147,7 @@ class ShiftRepository extends BaseRepository
         $shift->start_date = $request->edit_start_date;
         $shift->end_date = $request->edit_end_date;
         $shift->end_date = $request->edit_end_date;
+        $shift->instructions = $request->edit_instructions;
         $shift->working_days = json_encode($request->edit_working_days);
         $shift->save();
         $shift->staff()->delete();
