@@ -150,6 +150,22 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="edit_password" class="required">Password</label>
+                                    <input type="password" value="" class="form-control" placeholder="Enter Password"
+                                           name="edit_password"
+                                           id="edit_password">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="edit_confirm_password" class="">Confirm Password</label>
+                                    <input type="password" value="" class="form-control" placeholder="Enter Confirm Password"
+                                           name="edit_confirm_password"
+                                           id="edit_confirm_password">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -277,6 +293,14 @@
                     },
                     edit_type: {
                         required: true,
+                    },
+                    edit_password : {
+                        required: false,
+                        minlength : 5
+                    },
+                    edit_confirm_password : {
+                        minlength : 5,
+                        equalTo : "#edit_password"
                     }
                 },
                 messages: {},
@@ -337,6 +361,8 @@
 
             $('#hidden_id').val(data.id);
             $('#edit_modal').modal('show');
+            $('#edit_password').val('');
+            $('#edit_confirm_password').val('');
         });
 
         $(document).on('submit', '.delete_form', function (e) {
