@@ -83,7 +83,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="add_employment_postal_code" class="">Zip Code/Postal Code</label>
-                                <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                <input maxlength="31" type="text" class="form-control"
                                        name="add_employment_postal_code"
                                        id="add_employment_postal_code">
                             </div>
@@ -132,7 +132,7 @@
                             <div class="form-group">
                                 <label for="add_employment_reason_for_leaving" class="">Reason For Leaving</label>
                                 <input maxlength="31" type="text" class="form-control"
-                                       name="add_employment_reason_for_leaving"
+                                       name="add_employment_reason_for_leaving" placeholder="Reason For Leaving"
                                        id="add_employment_reason_for_leaving">
                             </div>
                         </div>
@@ -190,8 +190,8 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="edit_employment_postal_code" class="">Zip Code/Postal Code</label>
-                                <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
-                                       name="edit_employment_postal_code"
+                                <input maxlength="31" type="text" class="form-control"
+                                       name="edit_employment_postal_code" placeholder="Zip Code/Postal Code"
                                        id="edit_employment_postal_code">
                             </div>
                         </div>
@@ -199,7 +199,7 @@
                             <div class="form-group">
                                 <label for="edit_employment_contact_person" class="">Contact Person Name</label>
                                 <input maxlength="31" type="text" class="form-control entertxtOnly"
-                                       name="edit_employment_contact_person"
+                                       name="edit_employment_contact_person" placeholder="Contact Person Name"
                                        id="edit_employment_contact_person">
                             </div>
                         </div>
@@ -207,7 +207,7 @@
                             <div class="form-group">
                                 <label for="edit_employment_contact_phone" class="">Contact Person Phone</label>
                                 <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
-                                       name="edit_employment_contact_phone"
+                                       name="edit_employment_contact_phone" placeholder="Contact Person Phone"
                                        id="edit_employment_contact_phone">
                             </div>
                         </div>
@@ -215,7 +215,7 @@
                             <div class="form-group">
                                 <label for="edit_employment_email" class="">Contact Person Email</label>
                                 <input type="email" class="form-control"
-                                       name="edit_employment_email"
+                                       name="edit_employment_email" placeholder="Contact Person Email"
                                        id="edit_employment_email">
                             </div>
                         </div>
@@ -239,7 +239,7 @@
                             <div class="form-group">
                                 <label for="edit_employment_reason_for_leaving" class="">Reason For Leaving</label>
                                 <input maxlength="31" type="text" class="form-control"
-                                       name="edit_employment_reason_for_leaving"
+                                       name="edit_employment_reason_for_leaving" placeholder="Reason For Leaving"
                                        id="edit_employment_reason_for_leaving">
                             </div>
                         </div>

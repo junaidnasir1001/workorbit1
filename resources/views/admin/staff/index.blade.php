@@ -27,7 +27,7 @@
                         <th>ID</th>
                         <th>Name</th>
                         <th>Profile</th>
-                        <th>Staff Number</th>
+                        <th>Staff Mobile Number</th>
                         <th>Subcontractor</th>
                         <th>designation</th>
                         <th>Phone Number</th>
@@ -141,10 +141,10 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_pay_rate" class="">Pay Rate</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
-                                           placeholder="Enter Pay Rate"
+                                    <input maxlength="31" type="number" class="form-control"
+                                           placeholder="Pay Rate Format (1.00)"
                                            name="add_pay_rate"
-                                           id="add_pay_rate">
+                                           id="add_pay_rate" pattern="\d+(\.\d{2})?">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -278,10 +278,10 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_pay_rate" class="">Pay Rate</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
-                                           placeholder="Enter Pay Rate"
+                                    <input maxlength="31" type="number" class="form-control EnterOnlyNumber"
+                                           placeholder="Pay Rate Format (1.00)"
                                            name="edit_pay_rate"
-                                           id="edit_pay_rate">
+                                           id="edit_pay_rate" pattern="\d+(\.\d{2})?">
                                 </div>
                             </div>
                             <div class="col-md-6">

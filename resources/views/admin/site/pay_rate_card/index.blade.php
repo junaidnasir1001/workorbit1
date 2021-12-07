@@ -70,9 +70,9 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_pay_rate_card_rate" class="required">Rate</label>
-                                <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter rate"
+                                <input type="number" class="form-control" placeholder="Rate Format (1.00)"
                                        name="add_pay_rate_card_rate"
-                                       id="add_pay_rate_card_rate">
+                                       id="add_pay_rate_card_rate" pattern="\d+(\.\d{2})?">
                             </div>
                         </div>
                     </div>
@@ -118,9 +118,9 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="edit_pay_rate_card_rate" class="required">Rate</label>
-                                <input type="text" class="form-control" placeholder="Enter Rate"
+                                <input type="number" class="form-control" placeholder="Rate Format (1.00)"
                                        name="edit_pay_rate_card_rate"
-                                       id="edit_pay_rate_card_rate" required>
+                                       id="edit_pay_rate_card_rate" pattern="\d+(\.\d{2})?" required>
                             </div>
                         </div>
                     </div>

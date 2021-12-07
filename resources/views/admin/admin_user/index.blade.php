@@ -26,8 +26,8 @@
             <table id="dt" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
+                    <th>Sr#</th>
+                    <th>User Name</th>
                     <th>Email</th>
                     <th>Type</th>
                     <th>Actions</th>

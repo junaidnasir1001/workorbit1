@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group-sm">
-                        <label for="document_no">Document No</label>
+                        <label for="document_no">Passport No</label>
                         <input maxlength="31" class="form-control form-control-sm EnterOnlyNumber" type="number"
                                name="document_no" placeholder="Enter Document No"
                                id="document_no" value="{{$passport->document_no??''}}">

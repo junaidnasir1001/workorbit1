@@ -83,7 +83,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="add_personal_postal_code" class="">Zip Code/Postal Code</label>
-                                <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                <input maxlength="31" type="text" class="form-control"
                                        name="add_personal_postal_code"
                                        id="add_personal_postal_code" placeholder="Enter Postal Code">
                             </div>
@@ -107,7 +107,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="add_personal_references_how_long_know" class="">How long know</label>
-                                <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                <input maxlength="31" type="text" class="form-control"
                                        name="add_personal_references_how_long_know"
                                        id="add_personal_references_how_long_know" placeholder="Enter How long know">
                             </div>
@@ -176,7 +176,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="edit_personal_postal_code" class="">Zip Code/Postal Code</label>
-                                <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                <input maxlength="31" type="text" class="form-control"
                                        name="edit_personal_postal_code"
                                        id="edit_personal_postal_code">
                             </div>
@@ -200,7 +200,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="edit_personal_references_how_long_know" class="">How long know</label>
-                                <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                <input maxlength="31" type="text" class="form-control"
                                        name="edit_personal_references_how_long_know"
                                        id="edit_personal_references_how_long_know">
                             </div>

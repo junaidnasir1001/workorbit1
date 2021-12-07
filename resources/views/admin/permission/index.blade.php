@@ -313,6 +313,6 @@
                 });
 
     </script>
-    
+
 
 @endpush

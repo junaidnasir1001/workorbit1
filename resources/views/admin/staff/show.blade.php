@@ -3,7 +3,7 @@
 
 @section('content')
     <!-- Default box -->
-    <button style="margin-bottom: 20px;" onclick="window.history.back()" class="btn btn-secondary">Back</button>
+    <button style="margin-left: 1500px;margin-top: -80px;" onclick="window.history.back()" class="btn btn-secondary">Back</button>
     <div class="row">
         <div class="col-md-3">
             <!-- Profile Image -->
@@ -258,9 +258,9 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_pay_rate" class="">Pay Rate</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Pay Rate"
+                                    <input maxlength="31" type="number" class="form-control" placeholder="Rate Format (1.00)"
                                            name="edit_pay_rate"
-                                           id="edit_pay_rate" value="{{$staff->pay_rate}}">
+                                           id="edit_pay_rate" pattern="\d+(\.\d{2})?" value="{{$staff->pay_rate}}">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -655,7 +655,7 @@
                     {"data": "options", orderable: false, searchable: false}
                 ],
                 "order": [0, "desc"],
-                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+                "buttons": [],
                 "columnDefs": [{
                     "targets": [3],
                     "visible": false
@@ -1356,6 +1356,10 @@
                         required: false,
                         maxlength: 30,
                     },
+                    add_employment_end_date: {
+                        required: false,
+                        greaterThan: "#add_employment_start_date"
+                    },
                 },
                 messages: {},
                 errorElement: 'small',
@@ -1440,6 +1444,10 @@
                         required: false,
                         maxlength: 30,
                     },
+                    edit_employment_end_date: {
+                        required: false,
+                        greaterThan: "#edit_employment_start_date"
+                    },
                 },
                 messages: {},
                 errorElement: 'small',
@@ -1499,8 +1507,8 @@
             $('#edit_employment_company_name').val(data.company_name);
             $('#edit_employment_job_title').val(data.job_title);
             $('#edit_employment_address').val(data.address);
-            $('#edit_employment_postal_code').val(data.start_date);
-            $('#edit_employment_contact_person').val(data.postal_code);
+            $('#edit_employment_postal_code').val(data.postal_code);
+            $('#edit_employment_contact_person').val(data.contact_person);
             $('#edit_employment_contact_phone').val(data.contact_phone);
             $('#edit_employment_email').val(data.email);
             $('#edit_employment_start_date').val(data.start_date);

@@ -3,7 +3,7 @@
 
 @section('content')
     <!-- Default box -->
-    <button style="margin-bottom: 20px;" onclick="window.history.back()" class="btn btn-secondary">Back</button>
+    <button style="margin-left: 1500px;margin-top: -80px;" onclick="window.history.back()" class="btn btn-secondary">Back</button>
     <div class="row">
         <div class="col-md-3">
             <!-- Profile Image -->
@@ -18,7 +18,7 @@
 
                     <ul class="list-group list-group-unbordered mb-3">
                         <li class="list-group-item">
-                            <b>address</b> <a class="float-right"><small
+                            <b>Address</b> <a class="float-right"><small
                                     id="address">{{$site->address}}</small></a>
                         </li>
                         <li class="list-group-item">
@@ -186,7 +186,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_postal_code" class="">Postal Code/Zip Code</label>
-                                    <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter Postal Code"
+                                    <input type="text" class="form-control" placeholder="Enter Postal Code"
                                            name="edit_postal_code"
                                            maxlength="31"
                                            id="edit_postal_code" value="{{$site->postal_code}}">
@@ -195,7 +195,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_city" class="">City</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter City"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter City"
                                            name="edit_city"
                                            id="edit_city" value="{{$site->city}}">
                                 </div>
@@ -251,6 +251,10 @@
                     edit_city: {
                         required: false,
                         maxlength: 30,
+                    },
+                    edit_finish_date: {
+                        required: false,
+                        greaterThan: "#edit_start_date"
                     },
                 },
                 messages: {},

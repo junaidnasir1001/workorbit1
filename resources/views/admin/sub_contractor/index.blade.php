@@ -137,7 +137,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="add_postal_code" class="">Postal Code/Zip Code</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                    <input maxlength="31" type="text" class="form-control"
                                            placeholder="Enter Postal Code"
                                            name="add_postal_code"
                                            id="add_postal_code">
@@ -146,7 +146,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="add_city" class="">City</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter City"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter City"
                                            name="add_city"
                                            id="add_city">
                                 </div>
@@ -154,7 +154,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="add_country" class="">Country</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Country"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter Country"
                                            name="add_country"
                                            id="add_country">
                                 </div>
@@ -170,10 +170,10 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_pay_rate" class="">Pay Rate</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
-                                           placeholder="Enter Pay Rate"
+                                    <input maxlength="31" type="number" class="form-control"
+                                           placeholder="Pay Rate Format (1.00)"
                                            name="add_pay_rate"
-                                           id="add_pay_rate">
+                                           id="add_pay_rate" pattern="\d+(\.\d{2})?">
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -283,7 +283,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_postal_code" class="">Postal Code/Zip Code</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
+                                    <input maxlength="31" type="text" class="form-control"
                                            placeholder="Enter Postal Code"
                                            name="edit_postal_code"
                                            id="edit_postal_code">
@@ -292,7 +292,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_city" class="">City</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter City"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter City"
                                            name="edit_city"
                                            id="edit_city">
                                 </div>
@@ -300,7 +300,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_country" class="">Country</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Country"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter Country"
                                            name="edit_country"
                                            id="edit_country">
                                 </div>
@@ -317,10 +317,10 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_pay_rate" class="">Pay Rate</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
-                                           placeholder="Enter Pay Rate"
+                                    <input maxlength="31" type="number" class="form-control"
+                                           placeholder="Pay Rate Format (1.00)"
                                            name="edit_pay_rate"
-                                           id="edit_pay_rate">
+                                           id="edit_pay_rate" pattern="\d+(\.\d{2})?">
                                 </div>
                             </div>
                             <div class="col-md-12">

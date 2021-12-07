@@ -7,10 +7,10 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Add Permissions
+            <h3 class="card-title">User's Permissions
                 {{-- <a href="javascript:;" data-toggle="modal" data-target="#add_modal"  style="font-size: 24px"><i class="fa fa-plus"></i></a> --}}
                 <a href="javascript:;" class="btn btn-outline-primary btn-md btn-flat ml-2" data-toggle="modal"
-                   data-target="#add_modal"><i class="fa fa-plus"></i> Add Permissions</a>
+                   data-target="#add_modal"><i class="fa fa-plus"></i> Set User's Permissions</a>
             </h3>
 
             <div class="card-tools">

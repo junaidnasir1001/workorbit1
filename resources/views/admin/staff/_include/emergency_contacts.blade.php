@@ -24,8 +24,8 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Phone</th>
+                <th></th>
                 <th>Address</th>
-                <th>Zip Code/Postal Code</th>
                 <th></th>
             </tr>
             </thead>
@@ -78,14 +78,14 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="add_em_postal_code" class="">Zip Code/Postal Code</label>
-                                <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Postal Code"
+                                <input maxlength="31" type="text" class="form-control" placeholder="Enter Postal Code"
                                        name="add_em_postal_code"
                                        id="add_em_postal_code">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="add_em_address" class="">address</label>
+                                <label for="add_em_address" class="">Address</label>
                                 <input maxlength="101" type="text" class="form-control" placeholder="Enter Address"
                                        name="add_em_address"
                                        id="add_em_address">
@@ -145,7 +145,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="edit_em_postal_code" class="">Zip Code/Postal Code</label>
-                                <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Postal Code"
+                                <input maxlength="31" type="text" class="form-control" placeholder="Enter Postal Code"
                                        name="edit_em_postal_code"
                                        id="edit_em_postal_code">
                             </div>

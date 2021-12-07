@@ -108,16 +108,16 @@
                 <div class="col-md-3">
                     <div class="form-group-sm">
                         <label for="place_of_birth">Place of Birth</label>
-                        <input class="form-control form-control-sm" type="date"
-                               name="place_of_birth"
+                        <input class="form-control form-control-sm" type="text"
+                               name="place_of_birth" placeholder="Place of Birth"
                                id="place_of_birth" value="{{$staff_details->place_of_birth??''}}">
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="form-group-sm">
-                        <label for="nationality">Place of Birth</label>
-                        <input class="form-control form-control-sm" type="date"
-                               name="nationality"
+                        <label for="nationality">Nationality</label>
+                        <input class="form-control form-control-sm" type="text"
+                               name="nationality" placeholder="Nationality"
                                id="nationality" value="{{$staff_details->nationality??''}}">
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                 <div class="col-md-3">
                     <div class="form-group-sm">
                         <label for="postal_code">Zip Code/Postal Code</label>
-                        <input maxlength="31" class="form-control form-control-sm EnterOnlyNumber" type="number"
+                        <input maxlength="31" class="form-control form-control-sm" type="text"
                                name="postal_code" placeholder="Enter Postral Code"
                                id="postal_code" value="{{$staff_details->postal_code??''}}">
                     </div>
@@ -140,7 +140,7 @@
                 <div class="col-md-3">
                     <div class="form-group-sm">
                         <label for="city">City</label>
-                        <input class="form-control form-control-sm entertxtOnly" type="text" name="city"
+                        <input class="form-control form-control-sm" type="text" name="city"
                                id="city" placeholder="Enter City" value="{{$staff_details->city??''}}">
                     </div>
                 </div>
@@ -162,7 +162,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="form-group-sm">
-                        <label for="driving_license">Ethnic Origin</label>
+                        <label for="driving_license">Driving Licence</label>
                         <br>
                         @php
                             $staff_license="";

@@ -79,16 +79,16 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="add_education_city" class="">city</label>
-                                <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                <label for="add_education_city" class="">City</label>
+                                <input maxlength="31" type="text" class="form-control"
                                        name="add_education_city"
                                        id="add_education_city">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="add_education_country" class="">country</label>
-                                <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                <label for="add_education_country" class="">Country</label>
+                                <input maxlength="31" type="text" class="form-control"
                                        name="add_education_country"
                                        id="add_education_country">
                             </div>
@@ -163,7 +163,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="edit_education_city" class="">City</label>
-                                <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                <input maxlength="31" type="text" class="form-control"
                                        name="edit_education_city"
                                        id="edit_education_city" placeholder="Enter City">
                             </div>
@@ -171,7 +171,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="edit_education_country" class="">Country</label>
-                                <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                <input maxlength="31" type="text" class="form-control"
                                        name="edit_education_country"
                                        id="edit_education_country" placeholder="Enter Country">
                             </div>

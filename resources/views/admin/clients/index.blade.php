@@ -26,7 +26,7 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
+                    <th>Client Name</th>
                     <th>Profile</th>
                     <th>Phone Number</th>
                     <th>Mobile Number</th>
@@ -62,7 +62,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="add_name" class="required">Name</label>
+                                    <label for="add_name" class="required">Client Name</label>
                                     <input type="text" class="form-control entertxtOnly" placeholder="Client name"
                                            name="add_name"
                                            id="add_name" maxlength="31">
@@ -133,7 +133,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="add_postal_code" class="">Zip Code/Postal Code</label>
-                                    <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter Postal Code"
+                                    <input type="text" class="form-control" placeholder="Enter Postal Code"
                                            name="add_postal_code"
                                            maxlength="31"
                                            id="add_postal_code">
@@ -142,7 +142,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="add_city" class="">City</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter City"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter City"
                                            name="add_city"
                                            id="add_city">
                                 </div>
@@ -150,7 +150,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="add_country" class="">Country</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Country"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter Country"
                                            name="add_country"
                                            id="add_country">
                                 </div>
@@ -184,7 +184,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="edit_name" class="required">Name</label>
+                                    <label for="edit_name" class="required">Client Name</label>
                                     <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Client name"
                                            name="edit_name"
                                            id="edit_name">
@@ -256,7 +256,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_postal_code" class="">Zip Code/Postal Code</label>
-                                    <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter Postal Code"
+                                    <input type="text" class="form-control" placeholder="Enter Postal Code"
                                            name="edit_postal_code"
                                            maxlength="31"
                                            id="edit_postal_code">
@@ -265,7 +265,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_city" class="">City</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter City"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter City"
                                            name="edit_city"
                                            id="edit_city">
                                 </div>
@@ -273,7 +273,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_country" class="">Country</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Country"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter Country"
                                            name="edit_country"
                                            id="edit_country">
                                 </div>

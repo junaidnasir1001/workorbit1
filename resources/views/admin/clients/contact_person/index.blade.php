@@ -116,7 +116,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="add_contact_person_postal_code" class="">Postal Code/Zip Code</label>
-                                <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter Postal Code/Zip Code"
+                                <input type="text" class="form-control" placeholder="Enter Postal Code/Zip Code"
                                        name="add_contact_person_postal_code"
                                        maxlength="31"
                                        id="add_contact_person_postal_code">
@@ -207,7 +207,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="edit_contact_person_postal_code" class="">Postal Code/Zip Code</label>
-                                <input type="text" class="form-control EnterOnlyNumber" placeholder="Enter Postal Code/Zip Code"
+                                <input type="text" class="form-control" placeholder="Enter Postal Code/Zip Code"
                                        name="edit_contact_person_postal_code"
                                        maxlength="31"
                                        id="edit_contact_person_postal_code">

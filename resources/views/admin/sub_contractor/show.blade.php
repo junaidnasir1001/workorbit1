@@ -3,7 +3,7 @@
 
 @section('content')
     <!-- Default box -->
-    <button style="margin-bottom: 20px;" onclick="window.history.back()" class="btn btn-secondary">Back</button>
+    <button style="margin-left: 1500px;margin-top: -80px;" onclick="window.history.back()" class="btn btn-secondary">Back</button>
     <div class="row">
         <div class="col-md-3">
 
@@ -225,7 +225,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_postal_code" class="">Postal Code/ Zip Code</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Postal Code"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter Postal Code"
                                            name="edit_postal_code"
                                            id="edit_postal_code" value="{{$sub_contractor->postal_code}}">
                                 </div>
@@ -233,7 +233,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_city" class="">City</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter City"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter City"
                                            name="edit_city"
                                            id="edit_city" value="{{$sub_contractor->city}}">
                                 </div>
@@ -241,7 +241,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_country" class="">Country</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Country"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter Country"
                                            name="edit_country"
                                            id="edit_country" value="{{$sub_contractor->country}}">
                                 </div>
@@ -258,9 +258,9 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_pay_rate" class="">Pay Rate</label>
-                                    <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Pay Rate"
+                                    <input maxlength="31" type="number" class="form-control" placeholder="Rate Format (1.00)"
                                            name="edit_pay_rate"
-                                           id="edit_pay_rate" value="{{$sub_contractor->pay_rate}}">
+                                           id="edit_pay_rate" pattern="\d+(\.\d{2})?" value="{{$sub_contractor->pay_rate}}">
                                 </div>
                             </div>
                             <div class="col-md-12">
