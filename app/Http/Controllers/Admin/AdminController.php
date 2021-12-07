@@ -44,7 +44,7 @@ class AdminController extends Controller
             'email' => $request->add_email,
             'password' => Hash::make($request->add_password),
             'type' => $request->add_type,
-            
+
         ];
 
         $exists = Admin::where('name', $request->add_name)
@@ -98,6 +98,9 @@ class AdminController extends Controller
         $admin_user->name = $request->edit_name;
         $admin_user->email = $request->edit_email;
         $admin_user->type = $request->edit_type;
+        if ($request->edit_password){
+            $admin_user->password = Hash::make($request->edit_password);
+        }
 
 
         if ($admin_user->save()) {
@@ -172,7 +175,7 @@ class AdminController extends Controller
                 $nestedData['name'] = $row->name;
                 $nestedData['email'] = $row->email;
                 $nestedData['type'] = $row->type;
-                
+
                 $id = $row->id;
                 $del_link = route("admin.admin_user.destroy", ["admin_user" => $id]);
                 $csrf = csrf_token();
@@ -192,7 +195,7 @@ $editButton
        <form action='$del_link' method='POST' class='delete_form'>
         <input type='hidden' name='_token' value='$csrf'>
         <input type='hidden' name='_method' value='delete' />
-        $deleteButton  
+        $deleteButton
         </form>
 
         </div>
