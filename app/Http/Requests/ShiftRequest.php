@@ -24,6 +24,7 @@ class ShiftRequest extends FormRequest
     public function rules()
     {
         return [
+            'add_client_id' => 'required',
             'add_site_id' => 'required',
             'add_site_type_id' => 'required',
             'add_time_in' => 'required|date_format:H:i',
@@ -47,6 +48,7 @@ class ShiftRequest extends FormRequest
     public function messages()
     {
         return [
+            'add_client_id.required' => 'Please Select Client',
             'add_site_id.required' => 'Please Select Site',
             'add_site_type_id.required' => 'Please Select Site Type',
             'add_time_in.required' => 'Please Enter Time In',

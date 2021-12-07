@@ -11,6 +11,10 @@ class Shift extends Model
 
     protected $guarded = [];
 
+    public function client()
+    {
+        return $this->belongsTo(Clients::class);
+    }
     public function site()
     {
         return $this->belongsTo(Site::class);

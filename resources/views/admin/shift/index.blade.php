@@ -26,6 +26,7 @@
                 <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Client</th>
                     <th>Site</th>
                     <th>Site Type</th>
                     <th>Time In</th>
@@ -65,15 +66,27 @@
                                     <ul id="errors"></ul>
                                 </div>
                             </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="add_client_id" class="required">Clients</label>
+                                    <select name="add_client_id" id="add_client_id"
+                                            class="select2 form-control">
+                                        <option value="" selected disabled>-Select One-</option>
+                                        @foreach($clients as $client)
+                                            <option  value="{{$client->id}}">{{$client->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_site_id" class="required">Site</label>
                                     <select name="add_site_id" id="add_site_id"
                                             class="select2 form-control">
                                         <option value="" selected disabled>select site</option>
-                                        @foreach($sites as $site)
-                                            <option value="{{$site->id}}">{{$site->name}}</option>
-                                        @endforeach
+{{--                                        @foreach($sites as $site)--}}
+{{--                                            <option value="{{$site->id}}" client_id="{{$site->client_id}}">{{$site->name}}</option>--}}
+{{--                                        @endforeach--}}
                                     </select>
                                 </div>
                             </div>
@@ -272,11 +285,44 @@
             </div>
         </div>
     </form>
+    <input type="hidden" id="sites_data" value="{{json_encode($sites)}}">
     <!--/Edit Modal -->
 @endsection
 @push('js')
     <script>
         $(document).ready(function () {
+
+            $('#add_client_id').on('change',function (){
+                let sites_raw = $('#sites_data').val();
+                let client_id = parseInt($(this).val());
+                let sites = JSON.parse(sites_raw);
+                let client_sites = sites.filter( site =>{
+                    if(site.client_id === client_id){
+                        return site
+                    }
+                })
+                $('#add_site_id').find('option').not(':first').remove();
+                $.each(client_sites, function (i,value){
+                    $('#add_site_id').append(' <option value="'+value.id+'">'+value.name+'</option>')
+                })
+            })
+
+            $(document).on('change','#edit_client_id',function (){
+                let sites_raw = $('#sites_data').val();
+                let client_id = parseInt($(this).val());
+                let sites = JSON.parse(sites_raw);
+                let client_sites = sites.filter( site =>{
+                    if(site.client_id === client_id){
+                        return site
+                    }
+                })
+                $('#edit_site_id').find('option').not(':first').remove();
+                $.each(client_sites, function (i,value){
+                    $('#edit_site_id').append(' <option value="'+value.id+'">'+value.name+'</option>')
+                })
+            })
+
+
             var table = $("#dt").DataTable({
                 dom: 'Bfrtip',
                 "responsive": true,
@@ -295,6 +341,7 @@
                 },
                 "columns": [
                     {"data": "id"},
+                    {"data": "client_id"},
                     {"data": "site_id"},
                     {"data": "site_type_id"},
                     {"data": "time_in"},

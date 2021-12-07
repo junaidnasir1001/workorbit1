@@ -4,13 +4,25 @@
             <ul id="edit_errors"></ul>
         </div>
     </div>
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="edit_client_id" class="required">Clients</label>
+            <select name="edit_client_id" id="edit_client_id"
+                    class="select2 form-control">
+                <option value="" selected disabled>-Select One-</option>
+                @foreach($clients as $client)
+                    <option {{($shift->client_id == $client->id ? 'selected' : '' )}} value="{{$client->id}}">{{$client->name}}</option>
+                @endforeach
+            </select>
+        </div>
+    </div>
     <div class="col-md-6">
         <div class="form-group">
             <label for="edit_site_id" class="required">Site</label>
             <select name="edit_site_id" id="edit_site_id"
                     class="select2 form-control">
                 <option value="" selected disabled>select site</option>
-                @foreach($sites as $site)
+                @foreach($sites->where('client_id',$shift->client_id) as $site)
                     <option value="{{$site->id}}"
                         {{$shift->site_id==$site->id?'selected':''}}>{{$site->name}}</option>
                 @endforeach

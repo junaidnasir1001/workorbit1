@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ShiftRequest;
 use App\Http\Requests\ShiftUpdateRequest;
 use App\Interfaces\ShiftInterface;
+use App\Models\Clients;
 use App\Models\Shift;
 use App\Models\Site;
 use App\Models\SiteType;
@@ -44,6 +45,7 @@ class ShiftController extends Controller
         $sites = Site::all();
         $site_types = SiteType::isActive()->get();
         $staffs = Staff::isActive()->get();
+        $clients = Clients::get();
         $working_days = Shift::workingDays();
         return view('admin.shift.index', get_defined_vars());
     }
@@ -92,6 +94,7 @@ class ShiftController extends Controller
         $site_types = SiteType::isActive()->get();
         $staffs = Staff::isActive()->get();
         $working_days = Shift::workingDays();
+        $clients = Clients::get();
         return view('admin.shift.edit', get_defined_vars())->render();
     }
 

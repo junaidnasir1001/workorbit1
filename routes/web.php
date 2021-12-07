@@ -22,7 +22,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['guest:adm
 
     Route::get('/login', [\App\Http\Controllers\Admin\Auth\LoginController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [\App\Http\Controllers\Admin\Auth\LoginController::class, 'checkLogin'])->name('login.check');
-
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth:admin']], function () {

@@ -21,6 +21,7 @@ class ShiftRepository extends BaseRepository
     public function storeShift(array $data)
     {
         $shift_data = array(
+            'client_id' => $data['add_client_id'],
             'site_id' => $data['add_site_id'],
             'site_type_id' => $data['add_site_type_id'],
             'time_in' => $data['add_time_in'],
@@ -80,7 +81,7 @@ class ShiftRepository extends BaseRepository
         } else {
             $search = $request->input('search.value');
 
-            $results = Shift::with(['site', 'siteType', 'staff'])
+            $results = Shift::with(['site', 'siteType', 'staff','client'])
                 ->offset($start)
                 ->limit($limit)
                 ->orderBy($order, $dir)
@@ -93,6 +94,7 @@ class ShiftRepository extends BaseRepository
             foreach ($results as $key => $row) {
                 $params = htmlspecialchars(json_encode($row), ENT_QUOTES, 'UTF-8');
                 $nestedData['id'] = $key + 1;
+                $nestedData['client_id'] = ($row->client ? $row->client->name : null);
                 $nestedData['site_id'] = $row->site->name;
                 $nestedData['site_type_id'] = $row->siteType->name;
                 $nestedData['time_in'] = $row->time_in;
@@ -138,6 +140,7 @@ class ShiftRepository extends BaseRepository
     public function updateShift(Request $request, Shift $shift)
     {
 
+        $shift->client_id = $request->edit_client_id;
         $shift->site_id = $request->edit_site_id;
         $shift->site_type_id = $request->edit_site_type_id;
         $shift->time_in = $request->edit_time_in;
