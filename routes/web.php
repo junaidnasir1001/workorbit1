@@ -158,5 +158,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth:admi
     Route::resource('user_permission', \App\Http\Controllers\Admin\UserPermission::class);
     Route::post('/user_permission-list', [\App\Http\Controllers\Admin\UserPermission::class, 'showData'])->name('user_permission.list')->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
 
+    Route::resource('prefferd_staff', \App\Http\Controllers\Admin\PrefferdStaffController::class);
+
 });
 

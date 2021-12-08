@@ -3,7 +3,7 @@
 
 @section('content')
     <!-- Default box -->
-    <button style="margin-left: 1500px;margin-top: -80px;" onclick="window.history.back()" class="btn btn-secondary">Back</button>
+
     <div class="row">
         <div class="col-md-3">
             <!-- Profile Image -->
@@ -113,8 +113,8 @@
                         <!-- /.tab-pane -->
 
                         <div class="tab-pane" id="prefferd_staff">
-                            @include('admin.site._include.prefferd')
-                            @include('admin.site._include.banned')
+                            @include('admin.site.prefferd_staff.index')
+                            @include('admin.site.banned_staff.index')
                         </div>
                         <!-- /.tab-pane -->
 
@@ -202,18 +202,18 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="edit_start_date" class="">Start Date</label>
-                                    <input type="date" class="form-control"
-                                           name="edit_start_date"
-                                           id="edit_start_date" value="{{$site->start_date}}">
+                                    <label for="edit_longitude" class="">Longitude</label>
+                                    <input type="text" class="form-control"
+                                           name="edit_longitude" placeholder="Enter Longitude"
+                                           id="edit_longitude" pattern="-?\d{1,3}\.\d+" value="{{$site->longitude}}">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="edit_finish_date" class="">Finish Date</label>
-                                    <input type="date" class="form-control"
-                                           name="edit_finish_date"
-                                           id="edit_finish_date" value="{{$site->finish_date}}">
+                                    <label for="edit_latitude" class="">Latitude</label>
+                                    <input type="text" class="form-control"
+                                           name="edit_latitude" placeholder="Enter Latitude"
+                                           id="edit_latitude" value="{{$site->latitude}}">
                                 </div>
                             </div>
                         </div>

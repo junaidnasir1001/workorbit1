@@ -166,14 +166,13 @@
                         <br>
                         @php
                             $staff_license="";
-                            if(isset($staff_details->license)){
-                                $staff_license=$staff_details->license;
+                            if(isset($staff_details->driving_license)){
+                                $staff_license=$staff_details->driving_license;
                             }
                         @endphp
                         <select name="driving_license" id="driving_license"
                                 class="form-control form-control-sm">
-                            <option value="" disabled selected>select driving license
-                            </option>
+                            <option value="" disabled selected>select driving license</option>
                             @foreach($driving_license as $license)
                                 <option value="{{$license}}"
                                     {{$license==$staff_license?"selected":""}}

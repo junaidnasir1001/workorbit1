@@ -76,7 +76,9 @@
                                             href="{{$path ?? "javascript:void(0);"}}">{{$breadcrumb}}</a></li>
                                 @endforeach
                             </ol>
+
                         @endisset
+                            <button style="float: right;" onclick="window.history.back()" class="btn btn-secondary">Back</button>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->

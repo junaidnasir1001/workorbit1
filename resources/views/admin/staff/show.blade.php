@@ -3,7 +3,6 @@
 
 @section('content')
     <!-- Default box -->
-    <button style="margin-left: 1500px;margin-top: -80px;" onclick="window.history.back()" class="btn btn-secondary">Back</button>
     <div class="row">
         <div class="col-md-3">
             <!-- Profile Image -->
@@ -859,7 +858,7 @@
                     {"data": "options", orderable: false, searchable: false}
                 ],
                 "order": [0, "desc"],
-                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+                "buttons": [],
                 "columnDefs": [{
                     "targets": [],
                     "visible": false
@@ -1080,7 +1079,7 @@
                     {"data": "options", orderable: false, searchable: false}
                 ],
                 "order": [0, "desc"],
-                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+                "buttons": [],
                 "columnDefs": [{
                     "targets": [],
                     "visible": false
@@ -1314,7 +1313,7 @@
                     {"data": "options", orderable: false, searchable: false}
                 ],
                 "order": [0, "desc"],
-                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+                "buttons": [],
                 "columnDefs": [{
                     "targets": [3, 4, 5, 6, 7, 8, 9, 10],
                     "visible": false
@@ -1598,7 +1597,7 @@
                     {"data": "options", orderable: false, searchable: false}
                 ],
                 "order": [0, "desc"],
-                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+                "buttons": [],
                 "columnDefs": [{
                     "targets": [4, 5, 6, 7],
                     "visible": false
@@ -1849,7 +1848,7 @@
                     {"data": "options", orderable: false, searchable: false}
                 ],
                 "order": [0, "desc"],
-                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+                "buttons": [],
                 "columnDefs": [{
                     "targets": [2, 3, 4, 5, 6, 7, 8],
                     "visible": false

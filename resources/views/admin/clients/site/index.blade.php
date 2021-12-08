@@ -12,29 +12,28 @@
         </div>
     </div>
     <div class="card-body">
-    @if(hasPermission('client_site_list'))
-        <table id="prefferd_dt" class="table table-sm table-bordered table-striped">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Staff Number</th>
-                <th>Email</th>
-            </tr>
-            </thead>
-
-            @foreach($sites as $site)
-                <tbody>
+        @if(hasPermission('client_site_list'))
+            <table id="prefferd_dt" class="table table-sm table-bordered table-striped">
+                <thead>
                 <tr>
-                    <td>{{$loop->iteration}}</td>
-                    <td>{{$site->name}}</td>
-                    <td>{{$site->address}}</td>
-                    <td>{{$site->city}}</td>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Staff Number</th>
+                    <th>Email</th>
                 </tr>
-                </tbody>
-            @endforeach
-        </table>
-    @endif
+                </thead>
+                @foreach($sites as $site)
+                    <tbody>
+                    <tr>
+                        <td>{{$loop->iteration}}</td>
+                        <td><a href="">{{$site->name}}</a></td>
+                        <td>{{$site->address}}</td>
+                        <td>{{$site->city}}</td>
+                    </tr>
+                    </tbody>
+                @endforeach
+            </table>
+        @endif
     </div>
     <!-- /.card-body -->
 </div>

@@ -103,7 +103,7 @@
                                            id="add_city">
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <!--<div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_start_date" class="">Start Date</label>
                                     <input type="date" class="form-control"
@@ -118,7 +118,7 @@
                                            name="add_finish_date"
                                            id="add_finish_date">
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_longitude" class="">Longitude</label>
@@ -129,7 +129,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="add_latitude" class="">latitude</label>
+                                    <label for="add_latitude" class="">Latitude</label>
                                     <input type="text" class="form-control"
                                            name="add_latitude" placeholder="Enter Latitude"
                                            id="add_latitude" pattern="-?\d{1,3}\.\d+">
@@ -205,7 +205,7 @@
                                            id="edit_city">
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <!--<div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_start_date" class="">Start Date</label>
                                     <input type="date" class="form-control"
@@ -220,7 +220,7 @@
                                            name="edit_finish_date"
                                            id="edit_finish_date">
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_longitude" class="">Longitude</label>

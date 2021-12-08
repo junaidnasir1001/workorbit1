@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Clients;
 use App\Models\ShiftStaff;
+use App\Models\Staff;
 use App\Models\Site;
 use App\Models\Designation;
 use App\Models\SiteChargeRateCard;
@@ -21,7 +22,6 @@ class SiteController extends Controller
      */
     public function index()
     {
-
         $clients = Clients::all();
         return view('admin.site.index', get_defined_vars());
     }
@@ -82,6 +82,7 @@ class SiteController extends Controller
      */
     public function show(Site $site)
     {
+        $staffs = Staff::all();
         $sitetypes = SiteType::all();
         $clients = Clients::all();
         $designations = Designation::all();
