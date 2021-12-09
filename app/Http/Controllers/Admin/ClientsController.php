@@ -59,8 +59,6 @@ class ClientsController extends Controller
             'country' => $request->add_country,
         ];
 
-
-
         if ($request->hasFile('add_profile_path')) {
             $file_name = time() . '-client' . '.' . $request->add_profile_path->extension();
             $filePath = '/profile/clients/';

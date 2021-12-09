@@ -548,6 +548,7 @@
 
         $(document).on('click', '.edit_data', function () {
             var data = $(this).data('params');
+            let url = "{{url('')}}"
             console.log(data);
             $('#edit_first_name').val(data.first_name);
             $('#edit_last_name').val(data.last_name);
@@ -558,9 +559,8 @@
             $('#edit_email').val(data.email);
             $('#edit_staff_number').val(data.staff_number);
             $('#edit_sia_number').val(data.sia_number);
-
             $('#old_profile_path').val(data.profile_path);
-            $('#img_div').html('<img src="' + data.profile_path + '" alt="" style="height: 200px"/>');
+            $('#img_div').html('<img src="' +url+ data.profile_path + '" alt="" style="height: 200px"/>');
 
             $('#edit_pay_rate').val(data.pay_rate);
 

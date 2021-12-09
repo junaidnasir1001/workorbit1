@@ -26,7 +26,7 @@
                     <tbody>
                     <tr>
                         <td>{{$loop->iteration}}</td>
-                        <td><a href="">{{$site->name}}</a></td>
+                        <td><a href="{{route('admin.site.index')}}">{{$site->name}}</a></td>
                         <td>{{$site->address}}</td>
                         <td>{{$site->city}}</td>
                     </tr>

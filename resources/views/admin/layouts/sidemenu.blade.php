@@ -102,7 +102,7 @@
                     <ul class="nav nav-treeview">
                         @if(hasPermission('site_type_list'))
                             <li class="nav-item">
-                                <a href="{{route('admin.site_type.index')}}" class="nav-link">
+                                <a href="{{route('admin.site.index')}}" class="nav-link">
                                     <i class="far fa-users nav-icon"></i>
                                     <p>Site Type</p>
                                 </a>

@@ -30,12 +30,12 @@
                                     id="postal_code">{{$site->postal_code}}</small></a>
                         </li>
                         <li class="list-group-item">
-                            <b>start date</b> <a class="float-right"><small
-                                    id="start_date">{{$site->start_date}}</small></a>
+                            <b>Longitude</b> <a class="float-right"><small
+                                    id="start_date">{{$site->longitude}}</small></a>
                         </li>
                         <li class="list-group-item">
-                            <b>Finish Date</b> <a class="float-right"><small
-                                    id="finish_date">{{$site->finish_date}}
+                            <b>Latitude</b> <a class="float-right"><small
+                                    id="finish_date">{{$site->latitude}}
                                 </small></a>
                         </li>
                     </ul>

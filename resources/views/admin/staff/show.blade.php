@@ -11,7 +11,7 @@
                     <div class="text-center">
                         <img class="profile-user-img img-fluid img-circle" id="profile_path"
                              src="{{asset($staff->profile_path)}}"
-                             alt="Client profile picture">
+                             alt="Staff profile picture">
                     </div>
 
                     <h3 class="profile-username text-center" id="name">{{$staff->full_name}}</h3>

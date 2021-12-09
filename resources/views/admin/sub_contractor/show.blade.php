@@ -204,7 +204,7 @@
                                 <div class="form-group">
                                     <label>Subcontractor Profile</label>
                                     <div id="img_div">
-                                        <img src="{{public_path($sub_contractor->profile_path)}}" alt="profile image"
+                                        <img src="{{url($sub_contractor->profile_path)}}" alt="profile image"
                                              style="height: 200px" id="edit_profile_image">
                                     </div>
                                     <div class="custom-file">
@@ -393,8 +393,9 @@
                         $('#sub_contractor_city').val(data.city);
                         $('#sub_contractor_website').val(data.website);
                         $('#sub_contractor_address').val(data.address);
-                        $('#sub_contractor_profile_path').attr('src', data.profile_path);
-                        $('#edit_profile_image').attr('src', data.profile_path);
+                        $('#profile_path').attr('src', sub_contractor.profile_path);
+                        $('#edit_profile_image').attr('src', sub_contractor.profile_path);
+
                     },
                     error: function (xhr, error, status) {
                         swal.close();

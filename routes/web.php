@@ -49,6 +49,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth:admi
     Route::post('/site-type-list', [\App\Http\Controllers\Admin\SiteTypeController::class, 'showData'])->name('site_type.list');
 
     Route::resource('site', \App\Http\Controllers\Admin\SiteController::class);
+
+    Route::post('/preferred_staff_add', [\App\Http\Controllers\Admin\SiteController::class, 'preferred_staff_add'])->name('preferred.staff.add');
+    Route::post('/banned_staff_add', [\App\Http\Controllers\Admin\SiteController::class, 'banned_staff_add'])->name('banned.staff.add');
     Route::post('/site-list', [\App\Http\Controllers\Admin\SiteController::class, 'showData'])->name('site.list');
     Route::resource('site.note', \App\Http\Controllers\Admin\SiteNoteController::class);
 
@@ -63,6 +66,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth:admi
     Route::post('/designation-list', [\App\Http\Controllers\Admin\DesignationController::class, 'showData'])->name('designation.list');
 
     Route::resource('staff', \App\Http\Controllers\Admin\StaffController::class);
+
     Route::post('/staff-list', [\App\Http\Controllers\Admin\StaffController::class, 'showData'])->name('staff.list');
     Route::get('/staff-notes-list/{staff}', [\App\Http\Controllers\Admin\StaffController::class, 'notesList'])->name('staff.notes.list');
     Route::post('/save-staff-notes/{staff}', [\App\Http\Controllers\Admin\StaffController::class, 'saveNotes'])->name('staff.notes.save');
@@ -157,8 +161,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth:admi
 
     Route::resource('user_permission', \App\Http\Controllers\Admin\UserPermission::class);
     Route::post('/user_permission-list', [\App\Http\Controllers\Admin\UserPermission::class, 'showData'])->name('user_permission.list')->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
-
-    Route::resource('prefferd_staff', \App\Http\Controllers\Admin\PrefferdStaffController::class);
 
 });
 

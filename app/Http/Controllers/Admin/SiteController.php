@@ -5,12 +5,13 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Clients;
 use App\Models\ShiftStaff;
-use App\Models\Staff;
 use App\Models\Site;
 use App\Models\Designation;
 use App\Models\SiteChargeRateCard;
 use App\Models\SitePayRateCard;
+use App\Models\SiteStaff;
 use App\Models\SiteType;
+use App\Models\Staff;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
@@ -22,6 +23,7 @@ class SiteController extends Controller
      */
     public function index()
     {
+
         $clients = Clients::all();
         return view('admin.site.index', get_defined_vars());
     }
@@ -82,19 +84,10 @@ class SiteController extends Controller
      */
     public function show(Site $site)
     {
-        $staffs = Staff::all();
         $sitetypes = SiteType::all();
         $clients = Clients::all();
         $designations = Designation::all();
-        $preferredStaff = ShiftStaff::with(['staff'])->whereHas('shift', function ($q) use ($site) {
-            $q->where('site_id', $site->id);
-        })->get();
-
-        //dd($clients);
-
-        $bannedStaff = ShiftStaff::with(['staff'])->whereHas('shift', function ($q) use ($site) {
-            $q->where('site_id', '!=', $site->id);
-        })->get();
+        $staffs = Staff::all();
 
         return view('admin.site.show', get_defined_vars());
     }
@@ -257,6 +250,33 @@ class SiteController extends Controller
             "data" => $data
         );
         echo json_encode($json_data);
+    }
+
+    public function preferred_staff_add(Request $request){
+        $staff = new SiteStaff();
+        $staff->staff_id = $request->add_prefferd_staff_id;
+        $staff->site_id = $request->site_idd;
+        $staff->type = 'preferred';
+        $staff->save();
+
+        return redirect()->back();
+    }
+    public function banned_staff_add(Request $request){
+        $staff = new SiteStaff();
+        $staff->staff_id = $request->add_banned_staff_id;
+        $staff->site_id = $request->banned_site_id;
+        $staff->type = 'banned';
+        $staff->save();
+
+        return redirect()->back();
+    }
+
+    public function delete_site_staff(Request $request){
+        $staff = SiteStaff::find($request->delete_site_satff_modal);
+
+        $staff->delete();
+
+        return redirect()->back();
     }
 
 }

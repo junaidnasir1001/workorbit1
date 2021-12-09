@@ -5,7 +5,7 @@
             {{-- <a href="javascript:;" data-toggle="modal" data-target="#add_modal"  style="font-size: 24px"><i class="fa fa-plus"></i></a> --}}
             @if(hasPermission('add_site_charge_rate_card'))
             <a href="javascript:;" class="btn btn-primary btn-md btn-flat ml-2" data-toggle="modal"
-               data-target="#add_charge_rate_card_modal"><i
+               data-target="#add_banned_staff_modal"><i
                     class="fa fa-plus"></i> Add Banned Staff</a>
                     @endif
         </h3>
@@ -23,12 +23,37 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Type</th>
-                    <th>Rate</th>
+                    <th>Name</th>
+                    <th>Staff Number</th>
+                    <th>Email</th>
                     <th></th>
                 </tr>
                 </thead>
-                <tbody id="charge_rate_card_body">
+                <tbody id="">
+                @forelse($site->banned_staff as $banned_staff)
+                    <tr>
+                        <td>{{@$banned_staff->id}}</td>
+                        <td>{{@$banned_staff->staff->first_name}}</td>
+                        <td>{{@$banned_staff->staff->staff_number}}</td>
+                        <td>{{@$banned_staff->staff->email}}</td>
+
+                        <td>
+                            <button type='button' class='delete_site_satff btn btn-danger btn-sm'
+                                    id='{{@$banned_staff->id}}'>
+                                <i class='fas fa-trash-alt'></i>
+                            </button>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td><h4>No Preferred Staff</h4></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                @endforelse
                 </tbody>
             </table>
             @endif
@@ -40,15 +65,16 @@
 <!-- /.card -->
 
 <!--Add Modal -->
-<form method="post" id="add_charge_rate_card_form">
+<form method="post" action="{{route('admin.banned.staff.add')}}">
     @csrf
-    <div class="modal fade" id="add_charge_rate_card_modal" tabindex="-1" role="dialog"
+    <input type="hidden" name="banned_site_id" value="{{$site->id}}">
+    <div class="modal fade" id="add_banned_staff_modal" tabindex="-1" role="dialog"
          aria-labelledby="addModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addModalLabel">Add Site Charge Rate</h5>
+                    <h5 class="modal-title" id="addModalLabel">Add Banned Staff</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -57,22 +83,14 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="add_charge_rate_card_site_type_id" class="required">Type</label>
-                                <select name="add_charge_rate_card_site_type_id" id="add_charge_rate_card_site_type_id"
+                                <label for="add_banned_staff_id" class="required">Staff Name</label>
+                                <select name="add_banned_staff_id" id="add_banned_staff_id"
                                         class="form-control">
                                     <option value="" disabled selected>Select Type</option>
-                                    @foreach($sitetypes as $site_type)
-                                        <option value="{{$site_type->id}}">{{$site_type->name}}</option>
+                                    @foreach($staffs as $staff)
+                                        <option value="{{$staff->id}}">{{$staff->first_name}}</option>
                                     @endforeach
                                 </select>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="add_charge_rate_card_rate" class="required">Rate</label>
-                                <input type="number" class="form-control" placeholder="Rate Format (1.00)"
-                                       name="add_charge_rate_card_rate"
-                                       id="add_charge_rate_card_rate" pattern="\d+(\.\d{2})?">
                             </div>
                         </div>
                     </div>
@@ -87,53 +105,6 @@
 </form>
 <!--/Add Modal -->
 <!--Edit Modal -->
-<form method="post" id="edit_charge_rate_cards_form">
-    @csrf
-    @method('PUT')
-    <div class="modal fade" id="edit_charge_rate_cards_modal" tabindex="-1" role="dialog"
-         aria-labelledby="addModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addModalLabel">Edit Charge Rate Card</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="edit_charge_rate_card_site_type_id" class="required">Type</label>
-                                <select name="edit_charge_rate_card_site_type_id"
-                                        id="edit_charge_rate_card_site_type_id"
-                                        class="form-control" required>
-                                    <option value="" disabled selected>Select type</option>
-                                    @foreach($sitetypes as $site_type)
-                                        <option value="{{$site_type->id}}">{{$site_type->name}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="edit_charge_rate_card_rate" class="required">Rate</label>
-                                <input type="number" class="form-control" placeholder="Rate Format (1.00)"
-                                       name="edit_charge_rate_card_rate"
-                                       id="edit_charge_rate_card_rate" pattern="\d+(\.\d{2})?" required>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <input type="hidden" id="edit_charge_rate_card_id" name="edit_charge_rate_card_id">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Update</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</form>
+
 <!--/Edit Modal -->
 

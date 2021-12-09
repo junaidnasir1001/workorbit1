@@ -66,4 +66,13 @@ class Site extends Model
     {
         return $this->hasMany(SiteChargeRateCard::class);
     }
+
+    public function banned_staff()
+    {
+        return $this->hasMany(SiteStaff::class,'site_id','id')->where('type','banned');
+    }
+    public function preferred_staff()
+    {
+        return $this->hasMany(SiteStaff::class,'site_id','id')->where('type','preferred');;
+    }
 }

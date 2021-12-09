@@ -65,9 +65,12 @@ class StaffController extends Controller
         ];
 
         if ($request->hasFile('add_profile_path')) {
-            $filePath = $request->file('add_profile_path')->store('/profile/staff', 'public');
-            $data = array_merge($data, ['profile_path' => '/storage/' . $filePath]);
+            $file_name = time() . '-staff' . '.' . $request->add_profile_path->extension();
+            $filePath = '/profile/staff/';
+            $request->add_profile_path->move(public_path($filePath), $file_name);
+            $data = array_merge($data, ['profile_path' => $filePath . $file_name]);
         }
+
 
         /*$exists = Staff::where('email', $request->add_email)
             ->orWhere('phone_number', $request->add_phone_number)
@@ -151,8 +154,10 @@ class StaffController extends Controller
                 File::delete(public_path($request->old_profile_path));
             }
 
-            $filePath = $request->file('edit_profile_path')->store('/profile/staff', 'public');
-            $staff->profile_path = '/storage/' . $filePath;
+            $file_name = time() . '-staff' . '.' . $request->edit_profile_path->extension();
+            $filePath = '/profile/staff/';
+            $request->edit_profile_path->move(public_path($filePath), $file_name);
+            $staff->profile_path = $filePath . $file_name;
         }
 
         if ($staff->save()) {
@@ -250,7 +255,7 @@ class StaffController extends Controller
                 $params = htmlspecialchars(json_encode($row), ENT_QUOTES, 'UTF-8');
                 $nestedData['id'] = $key + 1;
                 $nestedData['first_name'] = "<a href='" . route('admin.staff.show', ['staff' => $row->id]) . "'>" . $row->first_name . " " . $row->last_name . "</a>";
-                $path = URL::asset($row->profile_path);
+                $path = asset($row->profile_path);
                 $nestedData['profile_path'] = "<img class='img-thumbnail' src='$path' alt='' style='width:60px'/>";
                 $nestedData['staff_number'] = $row->staff_number;
                 $nestedData['sub_contractor_id'] = $row->sub_contractor->name ?? '';
