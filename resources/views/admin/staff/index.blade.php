@@ -36,7 +36,7 @@
                         <th>Pay Rate</th>
                         <th>SIA Number</th>
                         <th>Status</th>
-                        <th></th>
+                        <th>Actions</th>
                     </tr>
                     </thead>
                 </table>
@@ -64,7 +64,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="add_first_name" class="required">First Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                    <input maxlength="31" type="text" class="form-control"
                                            placeholder="Enter First Name"
                                            name="add_first_name"
                                            id="add_first_name">
@@ -73,7 +73,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="add_last_name" class="required">Last Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                    <input maxlength="31" type="text" class="form-control"
                                            placeholder="Enter Last Name"
                                            name="add_last_name"
                                            id="add_last_name">
@@ -201,7 +201,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_first_name" class="required">First Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                    <input maxlength="31" type="text" class="form-control"
                                            placeholder="Enter First Name"
                                            name="edit_first_name"
                                            id="edit_first_name">
@@ -210,7 +210,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_last_name" class="required">Last Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                    <input maxlength="31" type="text" class="form-control"
                                            placeholder="Enter Last Name"
                                            name="edit_last_name"
                                            id="edit_last_name">
@@ -278,7 +278,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_pay_rate" class="">Pay Rate</label>
-                                    <input maxlength="31" type="number" class="form-control EnterOnlyNumber"
+                                    <input maxlength="31" type="number" class="form-control"
                                            placeholder="Pay Rate Format (1.00)"
                                            name="edit_pay_rate"
                                            id="edit_pay_rate" pattern="\d+(\.\d{2})?">

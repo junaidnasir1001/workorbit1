@@ -17,18 +17,14 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Staff Number</th>
-                    <th>Email</th>
+                    <th>Site Name</th>
                 </tr>
                 </thead>
                 @foreach($sites as $site)
                     <tbody>
                     <tr>
                         <td>{{$loop->iteration}}</td>
-                        <td><a href="{{route('admin.site.index')}}">{{$site->name}}</a></td>
-                        <td>{{$site->address}}</td>
-                        <td>{{$site->city}}</td>
+                        <td><a href="{{route('admin.site.index')}}/{{$site->id}}">{{$site->name}}</a></td>
                     </tr>
                     </tbody>
                 @endforeach

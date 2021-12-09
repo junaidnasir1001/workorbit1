@@ -79,53 +79,5 @@
 </form>
 <!--/Add Modal -->
 <!--Edit Modal -->
-<form method="post" id="edit_charge_rate_cards_form">
-    @csrf
-    @method('PUT')
-    <div class="modal fade" id="edit_charge_rate_cards_modal" tabindex="-1" role="dialog"
-         aria-labelledby="addModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addModalLabel">Edit Charge Rate Card</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="edit_charge_rate_card_site_type_id" class="required">Type</label>
-                                <select name="edit_charge_rate_card_site_type_id"
-                                        id="edit_charge_rate_card_site_type_id"
-                                        class="form-control" required>
-                                    <option value="" disabled selected>Select type</option>
-                                    @foreach($sitetypes as $site_type)
-                                        <option value="{{$site_type->id}}">{{$site_type->name}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="edit_charge_rate_card_rate" class="required">Rate</label>
-                                <input type="number" class="form-control" placeholder="Rate Format (1.00)"
-                                       name="edit_charge_rate_card_rate"
-                                       id="edit_charge_rate_card_rate" pattern="\d+(\.\d{2})?" required>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <input type="hidden" id="edit_charge_rate_card_id" name="edit_charge_rate_card_id">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Update</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</form>
 <!--/Edit Modal -->
 

@@ -36,7 +36,7 @@
                     <th>Start Date</th>
                     <th>End Date</th>
                     <th>Working Days</th>
-                    <th></th>
+                    <th>Actions</th>
                 </tr>
                 </thead>
             </table>

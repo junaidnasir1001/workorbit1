@@ -170,7 +170,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="edit_name" class="required">Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Name"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter Name"
                                            name="edit_name"
                                            id="edit_name" value="{{$site->name}}">
                                 </div>
@@ -222,6 +222,29 @@
                         <input type="hidden" id="hidden_id" name="hidden_id" value="{{$site->id}}">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form method="post"  action="{{route('admin.delete.site.staff')}}" >
+        @csrf
+        <div class="modal fade" id="delete_staff_modal" tabindex="-1" role="dialog"
+             aria-labelledby="addModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-danger">
+                        <h5 class="modal-title" id="addModalLabel">Are you sure you want to Delete this?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" id="delete_site_satff_modal" name="delete_site_satff_modal">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
                     </div>
                 </div>
             </div>
@@ -317,6 +340,13 @@
     {{--Notes script--}}
     <script>
         $(document).ready(function () {
+
+            $(document).on('click','.delete_site_satff',function (){
+                $('#delete_site_satff_modal').val($(this).attr('id'))
+                $('#delete_staff_modal').modal('show')
+            })
+
+
             getNoteList();
             var Id = "{{$site->id}}";
             $('#add_notes_form').on('submit', function (e) {
@@ -719,7 +749,6 @@
                         required: true,
                         maxlength: 30,
                     },
-                    edit_document_file_path: "required",
                 },
                 messages: {},
                 errorElement: 'small',

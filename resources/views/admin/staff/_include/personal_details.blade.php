@@ -32,22 +32,6 @@
                 </div>
                 <div class="col-md-3">
                     <div class="form-group-sm">
-                        <label for="contract_start_date">Contract Start Date</label>
-                        <input class="form-control form-control-sm" type="date"
-                               name="contract_start_date"
-                               id="contract_start_date" value="{{$staff_details->contract_start_date??''}}">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group-sm">
-                        <label for="contract_end_date">Contract End Date</label>
-                        <input class="form-control form-control-sm" type="date"
-                               name="contract_end_date"
-                               id="contract_end_date" value="{{$staff_details->contract_end_date??''}}">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group-sm">
                         <label for="ni_number">NI Number</label>
                         <input maxlength="31" class="form-control form-control-sm EnterOnlyNumber" type="number"
                                name="ni_number" placeholder="Enter NI Number"

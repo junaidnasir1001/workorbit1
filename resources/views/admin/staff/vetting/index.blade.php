@@ -27,7 +27,7 @@
                     <th>Note</th>
                     <th>Status</th>
                     <th>Link</th>
-                    <th></th>
+                    <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody id="staff_vetting_body">

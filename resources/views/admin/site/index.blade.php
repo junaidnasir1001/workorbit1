@@ -31,11 +31,9 @@
                     <th>Address</th>
                     <th>Postal Code/Zip Code</th>
                     <th>City</th>
-                    <th>Start Date</th>
-                    <th>Finish Date</th>
                     <th>Longitude</th>
                     <th>Latitude</th>
-                    <th></th>
+                    <th>Actions</th>
                 </tr>
                 </thead>
             </table>
@@ -275,8 +273,6 @@
                     {"data": "address"},
                     {"data": "postal_code"},
                     {"data": "city"},
-                    {"data": "start_date"},
-                    {"data": "finish_date"},
                     {"data": "longitude"},
                     {"data": "latitude"},
                     {"data": "options", orderable: false, searchable: false}

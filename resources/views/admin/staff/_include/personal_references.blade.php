@@ -29,7 +29,7 @@
                     <th>Occupation</th>
                     <th>How Long Know</th>
                     <th>Relation</th>
-                    <th></th>
+                    <th>Actions</th>
                 </tr>
                 </thead>
             </table>

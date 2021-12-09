@@ -25,7 +25,7 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Link</th>
-                    <th></th>
+                    <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody id="document_body">
@@ -106,7 +106,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="edit_document_file_name" class="required">File</label>
+                                <label for="edit_document_file_name" class="">File</label>
                                 <input type="file" class="form-control"
                                        name="edit_document_file_path"
                                        id="edit_document_file_name">

@@ -25,7 +25,7 @@
                 <th>Name</th>
                 <th>Certificate Number</th>
                 <th>Expiry Date</th>
-                <th></th>
+                <th>Actions</th>
             </tr>
             </thead>
         </table>
@@ -61,7 +61,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_c_number" class="">Certificate Number</label>
-                                <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Certificate Number"
+                                <input maxlength="31" type="text" class="form-control" placeholder="Enter Certificate Number"
                                        name="add_c_number"
                                        id="add_c_number">
                             </div>
@@ -112,7 +112,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="edit_c_number" class="">Certificate Number</label>
-                                <input maxlength="31" type="text" class="form-control EnterOnlyNumber" placeholder="Enter Certificate Number"
+                                <input maxlength="31" type="text" class="form-control" placeholder="Enter Certificate Number"
                                        name="edit_c_number"
                                        id="edit_c_number">
                             </div>

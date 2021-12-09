@@ -26,7 +26,7 @@
                 <th>Phone</th>
                 <th></th>
                 <th>Address</th>
-                <th></th>
+                <th>Actions</th>
             </tr>
             </thead>
         </table>

@@ -29,7 +29,7 @@
                     <th>Email</th>
                     <th>Address</th>
                     <th>Postal Code/Zip Code</th>
-                    <th></th>
+                    <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody id="contact_person_body">
@@ -75,7 +75,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="add_contact_person_name" class="required">Name</label>
-                                <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Name"
+                                <input maxlength="31" type="text" class="form-control" placeholder="Enter Name"
                                        name="add_contact_person_name"
                                        id="add_contact_person_name">
                             </div>
@@ -165,7 +165,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="edit_contact_person_name" class="required">Name</label>
-                                <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Name"
+                                <input maxlength="31" type="text" class="form-control" placeholder="Enter Name"
                                        name="edit_contact_person_name"
                                        id="edit_contact_person_name">
                             </div>

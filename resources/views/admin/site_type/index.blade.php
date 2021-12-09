@@ -28,7 +28,7 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Status</th>
-                    <th></th>
+                    <th>Actions</th>
                 </tr>
                 </thead>
             </table>

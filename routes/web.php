@@ -52,6 +52,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth:admi
 
     Route::post('/preferred_staff_add', [\App\Http\Controllers\Admin\SiteController::class, 'preferred_staff_add'])->name('preferred.staff.add');
     Route::post('/banned_staff_add', [\App\Http\Controllers\Admin\SiteController::class, 'banned_staff_add'])->name('banned.staff.add');
+    Route::post('/delete_site_staff', [\App\Http\Controllers\Admin\SiteController::class, 'delete_site_staff'])->name('delete.site.staff');
     Route::post('/site-list', [\App\Http\Controllers\Admin\SiteController::class, 'showData'])->name('site.list');
     Route::resource('site.note', \App\Http\Controllers\Admin\SiteNoteController::class);
 

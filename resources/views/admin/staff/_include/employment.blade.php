@@ -31,7 +31,7 @@
                 <th>Start Date</th>
                 <th>End Date</th>
                 <th>Reason For Leave</th>
-                <th></th>
+                <th>Actions</th>
             </tr>
             </thead>
         </table>

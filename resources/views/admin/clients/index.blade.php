@@ -36,7 +36,7 @@
                     <th>Postal Code/Zip Code</th>
                     <th>City</th>
                     <th>Country</th>
-                    <th></th>
+                    <th>Actions</th>
                 </tr>
                 </thead>
             </table>
@@ -63,7 +63,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_name" class="required">Client Name</label>
-                                    <input type="text" class="form-control entertxtOnly" placeholder="Client name"
+                                    <input type="text" class="form-control" placeholder="Client name"
                                            name="add_name"
                                            id="add_name" maxlength="31">
                                 </div>
@@ -185,7 +185,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_name" class="required">Client Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Client name"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Client name"
                                            name="edit_name"
                                            id="edit_name">
                                 </div>

@@ -158,7 +158,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_name" class="required">Client Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Client name"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Client name"
                                            name="edit_name"
                                            id="edit_name" value="{{$client->name}}">
                                 </div>
@@ -818,7 +818,6 @@
                         required: true,
                         maxlength: 30,
                     },
-                    edit_document_file_path: "required",
                 },
                 messages: {},
                 errorElement: 'small',

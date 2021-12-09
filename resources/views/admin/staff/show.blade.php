@@ -181,7 +181,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_first_name" class="required">First Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter First Name"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter First Name"
                                            name="edit_first_name"
                                            id="edit_first_name" value="{{$staff->first_name}}">
                                 </div>
@@ -189,7 +189,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edit_last_name" class="required">Last Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Last Name"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Enter Last Name"
                                            name="edit_last_name"
                                            id="edit_last_name" value="{{$staff->last_name}}">
                                 </div>
@@ -1315,7 +1315,7 @@
                 "order": [0, "desc"],
                 "buttons": [],
                 "columnDefs": [{
-                    "targets": [3, 4, 5, 6, 7, 8, 9, 10],
+                    "targets": [3, 4, 5, 6, 7, 10],
                     "visible": false
                 }],
                 "bDestroy": true
@@ -1850,7 +1850,7 @@
                 "order": [0, "desc"],
                 "buttons": [],
                 "columnDefs": [{
-                    "targets": [2, 3, 4, 5, 6, 7, 8],
+                    "targets": [2, 3, 4, 6, 7, 8],
                     "visible": false
                 }],
                 "bDestroy": true
@@ -2477,7 +2477,6 @@
                         required: true,
                         maxlength: 30,
                     },
-                    edit_document_file_path: "required",
                 },
                 messages: {},
                 errorElement: 'small',

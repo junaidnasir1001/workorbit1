@@ -17,7 +17,7 @@
                 <div class="col-md-3">
                     <div class="form-group-sm">
                         <label for="trousers_size">Trousers Size</label>
-                        <input maxlength="31" type="text" class="form-control form-control-sm entertxtOnly" placeholder="Enter Trousers Size" name="trousers_size" id="trousers_size"
+                        <input maxlength="31" type="text" class="form-control form-control-sm" placeholder="Enter Trousers Size" name="trousers_size" id="trousers_size"
                                value="{{$appearance ? ($appearance->trousers_size??""):""}}">
                     </div>
                 </div>

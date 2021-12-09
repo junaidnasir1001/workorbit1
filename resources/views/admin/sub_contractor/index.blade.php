@@ -39,7 +39,7 @@
                         <th>Pay Rate</th>
                         <th>Website</th>
                         <th>Status</th>
-                        <th></th>
+                        <th>Actions</th>
                     </tr>
                     </thead>
                 </table>
@@ -67,7 +67,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="add_name" class="required">Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                    <input maxlength="31" type="text" class="form-control"
                                            placeholder="Subcontractor name"
                                            name="add_name"
                                            id="add_name">
@@ -213,7 +213,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="edit_name" class="required">Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Client name"
+                                    <input maxlength="31" type="text" class="form-control" placeholder="Client name"
                                            name="edit_name"
                                            id="edit_name">
                                 </div>
