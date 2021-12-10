@@ -58,7 +58,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_personal_references_name" class="required">Name</label>
-                                <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                <input maxlength="31" type="text" class="form-control"
                                        placeholder="Enter Name"
                                        name="add_personal_references_name"
                                        id="add_personal_references_name">
@@ -150,8 +150,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="edit_personal_references_name" class="required">name</label>
-                                <input maxlength="31" type="text" class="form-control entertxtOnly"
+                                <label for="edit_personal_references_name" class="required">Name</label>
+                                <input maxlength="31" type="text" class="form-control"
                                        placeholder="Enter Name"
                                        name="edit_personal_references_name"
                                        id="edit_personal_references_name">

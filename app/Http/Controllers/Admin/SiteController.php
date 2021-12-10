@@ -84,10 +84,10 @@ class SiteController extends Controller
      */
     public function show(Site $site)
     {
-        $sitetypes = SiteType::all();
+        $sitetypes = SiteType::isActive()->get();
         $clients = Clients::all();
-        $designations = Designation::all();
-        $staffs = Staff::all();
+        $designations = Designation::active()->get();
+        $staffs = Staff::isActive()->get();
 
         return view('admin.site.show', get_defined_vars());
     }

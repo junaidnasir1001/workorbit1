@@ -147,7 +147,7 @@
                                            id="add_pay_rate" pattern="\d+(\.\d{2})?">
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="add_sia_number" class="">SIA Number</label>
                                     <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
@@ -156,20 +156,59 @@
                                            id="add_sia_number">
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-2">
+                                <br>
+                                <button type="button" id="verify_sia" class="btn btn-primary m-2">Verify</button>
+                            </div>
+                            <div class="col-md-4">
                                 <label>Staff Profile</label>
                                 <div class="custom-file">
                                     <input type="file" class="" id="add_profile_path" name="add_profile_path">
                                 </div>
                                 <p><small class="cr-file-description">image size should be less than 2mb</small></p>
-
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="add_is_active"
-                                           name="add_is_active">
-                                    <label class="form-check-label" for="add_is_active">Active</label>
+                                <div class="col-md-12">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="add_is_active"
+                                               name="add_is_active">
+                                        <label class="form-check-label" for="add_is_active">Active</label>
+                                    </div>
                                 </div>
+                            </div>
+
+                            <div class="col-md-8">
+                                <div class="" id="sia_details_invalid" style="display: none;">
+                                    <h3 style="text-align: center; color: red;">Record Not Found</h3>
+                                </div>
+                                <div class=""  style="display: none;" id="sia_details">
+                                    <div class="row"  >
+                                        <div class="col-md-7">
+                                            <label>First Name: <span id="sia_fname"></span></label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Surname: <span id="sia_surname"></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <label>Licence number: <span id="sia_licence_number"></span></label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Role: <span id="sia_role"></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <label>Licence sector: <span id="sia_licence_sector"></span></label>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <label>Expiry date: <span id="sia_expiry_date"></span></label>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -464,10 +503,10 @@
                         required: true,
                         maxlength: 30,
                     },
-                    add_designation_id: {
+                    edit_designation_id: {
                         required: true,
                     },
-                    add_profile_path: {
+                    edit_profile_path: {
                         required: false,
                         extension: "jpg|jpeg|png",
                         filesize: 2,//file size in mb

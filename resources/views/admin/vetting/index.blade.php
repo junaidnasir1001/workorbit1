@@ -55,7 +55,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="add_name" class="required">Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Type Name"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Name"
                                            name="add_name"
                                            id="add_name">
                                 </div>
@@ -90,7 +90,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="edit_name" class="required">Name</label>
-                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Client name"
+                                    <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter name"
                                            name="edit_name"
                                            id="edit_name">
                                 </div>

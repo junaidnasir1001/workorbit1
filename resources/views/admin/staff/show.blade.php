@@ -320,10 +320,10 @@
                         required: true,
                         maxlength: 30,
                     },
-                    add_designation_id: {
+                    edit_designation_id: {
                         required: true,
                     },
-                    add_profile_path: {
+                    edit_profile_path: {
                         required: false,
                         extension: "jpg|jpeg|png",
                         filesize: 2,//file size in mb
