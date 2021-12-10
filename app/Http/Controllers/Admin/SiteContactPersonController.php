@@ -91,6 +91,8 @@ class SiteContactPersonController extends Controller
      */
     public function update(Request $request)
     {
+
+
         try {
             $contact_person = ContactPerson::find($request->hidden_contact_person_id);
             $contact_person->title = $request->edit_contact_person_title;

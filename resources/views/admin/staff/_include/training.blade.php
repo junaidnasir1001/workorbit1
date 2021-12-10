@@ -54,7 +54,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_training_provider_name" class="required">Provider Name</label>
-                                <input maxlength="31" type="text" class="form-control" placeholder="Enter Certificate Name"
+                                <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Certificate Name"
                                        name="add_training_provider_name"
                                        id="add_training_provider_name">
                             </div>
@@ -62,7 +62,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_training_course_name" class="required">Course Name</label>
-                                <input maxlength="31" type="text" class="form-control" placeholder="Enter Course Number"
+                                <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Course Number"
                                        name="add_training_course_name"
                                        id="add_training_course_name">
                             </div>
@@ -121,7 +121,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="edit_training_provider_name" class="required">Provider Name</label>
-                                <input maxlength="31" type="text" class="form-control" placeholder="Enter Certificate Name"
+                                <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Certificate Name"
                                        name="edit_training_provider_name"
                                        id="edit_training_provider_name">
                             </div>
@@ -129,7 +129,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="edit_training_course_name" class="required">Course Name</label>
-                                <input maxlength="31" type="text" class="form-control" placeholder="Enter Certificate Number"
+                                <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Certificate Number"
                                        name="edit_training_course_name"
                                        id="edit_training_course_name">
                             </div>

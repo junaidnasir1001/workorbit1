@@ -56,7 +56,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_education_institution" class="required">Institution</label>
-                                <input maxlength="31" type="text" class="form-control" placeholder="Enter Institution Name"
+                                <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Institution Name"
                                        name="add_education_institution"
                                        id="add_education_institution">
                             </div>
@@ -64,7 +64,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="add_education_speciality" class="required">Speciality</label>
-                                <input maxlength="31" type="text" class="form-control" placeholder="Enter speciality"
+                                <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter speciality"
                                        name="add_education_speciality"
                                        id="add_education_speciality">
                             </div>
@@ -80,7 +80,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="add_education_city" class="">City</label>
-                                <input maxlength="31" type="text" class="form-control" placeholder="Enter City"
+                                <input maxlength="31" type="text" class="form-control"
                                        name="add_education_city"
                                        id="add_education_city">
                             </div>
@@ -88,7 +88,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="add_education_country" class="">Country</label>
-                                <input maxlength="31" type="text" class="form-control" placeholder="Enter Country"
+                                <input maxlength="31" type="text" class="form-control"
                                        name="add_education_country"
                                        id="add_education_country">
                             </div>
@@ -139,7 +139,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="edit_education_institution" class="required">Institution</label>
-                                <input maxlength="31" type="text" class="form-control" placeholder="Enter Institution Name"
+                                <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter Institution Name"
                                        name="edit_education_institution"
                                        id="edit_education_institution">
                             </div>
@@ -147,7 +147,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="edit_education_speciality" class="required">Speciality</label>
-                                <input maxlength="31" type="text" class="form-control" placeholder="Enter speciality"
+                                <input maxlength="31" type="text" class="form-control entertxtOnly" placeholder="Enter speciality"
                                        name="edit_education_speciality"
                                        id="edit_education_speciality">
                             </div>
