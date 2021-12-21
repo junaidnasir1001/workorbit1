@@ -258,6 +258,23 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="javascript:;" class="nav-link">
+                        <i class="nav-icon fas fa-cogs"></i>
+                        <p>
+                            Settings
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{route('admin.option.index')}}" class="nav-link">
+                                    <i class="far fa-users nav-icon"></i>
+                                    <p>Setting</p>
+                                </a>
+                            </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

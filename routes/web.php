@@ -163,5 +163,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth:admi
     Route::resource('user_permission', \App\Http\Controllers\Admin\UserPermission::class);
     Route::post('/user_permission-list', [\App\Http\Controllers\Admin\UserPermission::class, 'showData'])->name('user_permission.list')->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
 
+    Route::resource('option', \App\Http\Controllers\Admin\OptionController::class);
+    Route::post('/option-list', [\App\Http\Controllers\Admin\OptionController::class, 'showData'])->name('option.list')->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
+    Route::post('/save-staff-notes/{staff}', [\App\Http\Controllers\Admin\StaffController::class, 'saveNotes'])->name('staff.notes.save');
 });
 

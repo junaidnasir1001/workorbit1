@@ -286,6 +286,33 @@
 @endsection
 @push('js')
     <script>
+        //page refresh when updata the image
+        $('#edit_modal').on('hidden.bs.modal', function () {
+            location.reload();
+        })
+        //Image preview
+        $("#edit_profile_path").on('change', function (){
+            var img_path = $(this)[0].value;
+            var img_holder = $('#img_div');
+            var extension = img_path.substring(img_path.lastIndexOf('.')+1).toLowerCase();
+            console.log(extension);
+            if(extension == 'jpeg' || extension == 'jpg' || extension == 'png'){
+                if(typeof(FileReader) != 'undefined'){
+                    img_holder.empty();
+                    var reader = new FileReader();
+
+                    reader.onload = function(e){
+                        $('<img/>',{'src':e.target.result,'class':'img-fluid','style':'height: 200px;margin-bottom:10px;'}).appendTo(img_holder);
+                    }
+                    img_holder.show();
+                    reader.readAsDataURL($(this)[0].files[0]);
+                }else{
+                    $(img_holder).html('This browser does not support FileReader');
+                }
+            }else{
+                $(img_holder).empty();
+            }
+        })
         $(document).ready(function () {
 
             getNoteList();

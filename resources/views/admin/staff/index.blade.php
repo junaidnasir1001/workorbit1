@@ -35,6 +35,7 @@
                         <th>Email</th>
                         <th>Pay Rate</th>
                         <th>SIA Number</th>
+                        <th>SIA Expiry</th>
                         <th>Status</th>
                         <th>Actions</th>
                     </tr>
@@ -149,11 +150,11 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="add_sia_number" class="">SIA Number</label>
+                                    <label for="add_sia_number" class="required">SIA Number</label>
                                     <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
                                            placeholder="Enter SIA Number"
                                            name="add_sia_number"
-                                           id="add_sia_number">
+                                           id="add_sia_number" required>
                                 </div>
                             </div>
                             <div class="col-md-2">
@@ -182,10 +183,16 @@
                                 <div class=""  style="display: none;" id="sia_details">
                                     <div class="row"  >
                                         <div class="col-md-7">
-                                            <label>First Name: <span id="sia_fname"></span></label>
+                                            <label>First Name:
+                                                <span id="sia_fname_span" style="color: red"></span>
+                                                <input type="hidden" id="sia_fname" name="sia_fname">
+                                            </label>
                                         </div>
                                         <div class="col-md-4">
-                                            <label>Surname: <span id="sia_surname"></span></label>
+                                            <label>Surname:
+                                                <span id="sia_surname_span" style="color: red"></span>
+                                                <input type="hidden" id="sia_surname" name="sia_surname">
+                                            </label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -193,18 +200,30 @@
                                             <label>Licence number: <span id="sia_licence_number"></span></label>
                                         </div>
                                         <div class="col-md-4">
-                                            <label>Role: <span id="sia_role"></span></label>
+
+                                            <label>Role:
+                                                <span id="add_sia_role_span"></span>
+                                                <input type="hidden" id="add_sia_role" name="add_sia_role">
+                                            </label>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-7">
-                                            <label>Licence sector: <span id="sia_licence_sector"></span></label>
+
+                                            <label>Licence sector:
+                                                <span id="add_sia_licence_sector_span"></span>
+                                                <input type="hidden" id="add_sia_licence_sector" name="add_sia_licence_sector">
+                                            </label>
                                         </div>
 
                                     </div>
                                     <div class="row">
                                         <div class="col-md-7">
-                                            <label>Expiry date: <span id="sia_expiry_date"></span></label>
+
+                                            <label>Expiry date:
+                                                <span id="add_sia_expiry_date_span"></span>
+                                                <input type="hidden" id="add_sia_expiry_date" name="add_sia_expiry_date">
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
@@ -323,14 +342,71 @@
                                            id="edit_pay_rate" pattern="\d+(\.\d{2})?">
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="edit_sia_number" class="">SIA Number</label>
+                                    <label for="edit_sia_number" class="required">SIA Number</label>
                                     <input maxlength="31" type="text" class="form-control EnterOnlyNumber"
                                            placeholder="Enter SIA Number"
                                            name="edit_sia_number"
                                            id="edit_sia_number">
                                 </div>
+                            </div>
+                            <div class="col-md-2">
+                                <br>
+                                <button type="button" id="edit_verify_sia" class="btn btn-primary m-2">Verify</button>
+                            </div>
+
+                            <div class="col-md-8">
+                                <div class="" id="edit_sia_details_invalid" style="display: none;">
+                                    <h3 style="text-align: center; color: red;">Record Not Found</h3>
+                                </div>
+                                <div class=""  style="display: none;" id="edit_sia_details">
+                                    <div class="row"  >
+                                        <div class="col-md-7">
+                                            <label>First Name:
+                                                <span id="edit_sia_fname_span" style="color:red;"></span>
+                                                <input type="hidden" id="edit_sia_fname" name="edit_sia_fname">
+                                            </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Surname:
+                                                <span id="edit_sia_surname_span" style="color:red;"></span>
+                                                <input type="hidden" id="edit_sia_surname" name="edit_sia_surname">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <label>Licence number:
+                                                <span id="edit_sia_licence_number"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Role:
+                                                <span id="edit_sia_role_span"></span>
+                                                <input type="hidden" id="edit_sia_role" name="edit_sia_role">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <label>Licence sector:
+                                                <span id="edit_sia_licence_sector_span"></span>
+                                                <input type="hidden" id="edit_sia_licence_sector" name="edit_sia_licence_sector">
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <label>Expiry date:
+                                                <span id="edit_sia_expiry_date_span"></span>
+                                                <input type="hidden" id="add_sia_expiry_date" name="add_sia_expiry_date">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -349,6 +425,8 @@
                                     <label class="form-check-label" for="edit_is_active">Active</label>
                                 </div>
                             </div>
+
+
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -393,6 +471,7 @@
                     {"data": "email"},
                     {"data": "pay_rate"},
                     {"data": "sia_number"},
+                    {"data": "sia_expiry_date"},
                     {"data": "is_active"},
                     {"data": "options", orderable: false, searchable: false}
                 ],
@@ -409,10 +488,12 @@
                     add_first_name: {
                         required: true,
                         maxlength: 30,
+                        equalTo: "#sia_fname",
                     },
                     add_last_name: {
                         required: true,
                         maxlength: 30,
+                        equalTo: "#sia_surname",
                     },
                     add_designation_id: {
                         required: true,
@@ -443,10 +524,9 @@
                         maxlength: 30,
                     },
                     add_sia_number: {
-                        required: false,
+                        required: true,
                         maxlength: 30,
                     },
-
                 },
                 messages: {},
                 errorElement: 'small',
@@ -498,10 +578,12 @@
                     edit_first_name: {
                         required: true,
                         maxlength: 30,
+                        equalTo: "#edit_sia_fname",
                     },
                     edit_last_name: {
                         required: true,
                         maxlength: 30,
+                        equalTo: "#edit_sia_surname",
                     },
                     edit_designation_id: {
                         required: true,
@@ -532,7 +614,7 @@
                         maxlength: 30,
                     },
                     edit_sia_number: {
-                        required: false,
+                        required: true,
                         maxlength: 30,
                     },
 
@@ -585,6 +667,88 @@
             });
         });
 
+        $('#verify_sia').on('click', function (e) {
+                e.preventDefault();
+                let sia_no = $('#add_sia_number').val();
+                if (!sia_no) {
+                    alert('Please Add SIA Value')
+                    return
+                }
+
+                $.ajax({
+                    type: 'get',
+                    url: '/orbit/admin/verify-sia-no/'+sia_no,
+                    success: function (response) {
+
+                        let result = JSON.parse(response);
+                        if (result['First name'].trim()){
+                            $('#sia_details').show();
+                            $('#sia_details_invalid').hide();
+                            $('#sia_fname_span').text(result['First name'])
+                            $('#sia_fname').val(result['First name'])
+                            $('#sia_surname_span').text(result['Surname'])
+                            $('#sia_surname').val(result['Surname'])
+                            $('#sia_licence_number').text(result['Licence number'])
+                            $('#add_sia_role').val(result['Role'])
+                            $('#add_sia_role_span').text(result['Role'])
+                            $('#add_sia_licence_sector').val(result['Licence sector'])
+                            $('#add_sia_licence_sector_span').text(result['Licence sector'])
+                            $('#add_sia_expiry_date').val(result['Expiry date'])
+                            $('#add_sia_expiry_date_span').text(result['Expiry date'])
+                        }else {
+                            $('#sia_details').hide();
+                            $('#sia_details_invalid').show();
+                        }
+
+                        //console.log(result['First name'])
+                    },
+                    error: function (error) {
+                        console.log(error)
+                    }
+                });
+            });
+
+        $('#edit_verify_sia').on('click', function (e) {
+            e.preventDefault();
+            let sia_no = $('#edit_sia_number').val();
+            if (!sia_no) {
+                alert('Please Add SIA Value')
+                return
+            };
+
+            $.ajax({
+                type: 'get',
+                url: '/orbit/admin/verify-sia-no/'+sia_no,
+                success: function (response) {
+
+                    let result = JSON.parse(response);
+                    if (result['First name'].trim()){
+                        $('#edit_sia_details').show();
+                        $('#edit_sia_details_invalid').hide();
+                        $('#edit_sia_fname_span').text(result['First name'])
+                        $('#edit_sia_fname').val(result['First name'])
+                        $('#edit_sia_surname_span').text(result['Surname'])
+                        $('#edit_sia_surname').val(result['Surname'])
+                        $('#edit_sia_licence_number').text(result['Licence number'])
+                        $('#edit_sia_role').val(result['Role'])
+                        $('#edit_sia_role_span').text(result['Role'])
+                        $('#edit_sia_licence_sector').val(result['Licence sector'])
+                        $('#edit_sia_licence_sector_span').text(result['Licence sector'])
+                        $('#edit_sia_expiry_date').val(result['Expiry date'])
+                        $('#edit_sia_expiry_date_span').text(result['Expiry date'])
+                    }else {
+                        $('#edit_sia_details').hide();
+                        $('#edit_sia_details_invalid').show();
+                    }
+
+                    // console.log(result['First name'])
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+            });
+        });
+
         $(document).on('click', '.edit_data', function () {
             var data = $(this).data('params');
             let url = "{{url('')}}"
@@ -599,7 +763,7 @@
             $('#edit_staff_number').val(data.staff_number);
             $('#edit_sia_number').val(data.sia_number);
             $('#old_profile_path').val(data.profile_path);
-            $('#img_div').html('<img src="' +url+ data.profile_path + '" alt="" style="height: 200px"/>');
+            $('#img_div').html('<img src="' +url+ data.profile_path + '" alt="" style="height: 200px;margin-bottom:10px;"/>');
 
             $('#edit_pay_rate').val(data.pay_rate);
 
@@ -612,6 +776,31 @@
             $('#hidden_id').val(data.id);
             $('#edit_modal').modal('show');
         });
+
+        //Image preview
+        $("#edit_profile_path").on('change', function (){
+            var img_path = $(this)[0].value;
+            var img_holder = $('#img_div');
+            var extension = img_path.substring(img_path.lastIndexOf('.')+1).toLowerCase();
+            console.log(extension);
+            if(extension == 'jpeg' || extension == 'jpg' || extension == 'png'){
+                if(typeof(FileReader) != 'undefined'){
+                    img_holder.empty();
+                    var reader = new FileReader();
+
+                    reader.onload = function(e){
+                        $('<img/>',{'src':e.target.result,'class':'img-fluid','style':'height: 200px;margin-bottom:10px;'}).appendTo(img_holder);
+                    }
+                    img_holder.show();
+                    reader.readAsDataURL($(this)[0].files[0]);
+                }else{
+                    $(img_holder).html('This browser does not support FileReader');
+                }
+            }else{
+                $(img_holder).empty();
+            }
+        })
+
 
         $(document).on('submit', '.delete_form', function (e) {
             e.preventDefault();

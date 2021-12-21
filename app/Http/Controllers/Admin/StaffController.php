@@ -11,7 +11,7 @@ use App\Models\Vetting;
 use App\Models\StaffDetails;
 use App\Models\StaffHealthInformation;
 use App\Models\SubContractor;
-use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\URL;
@@ -61,6 +61,9 @@ class StaffController extends Controller
             'email' => $request->add_email,
             'pay_rate' => $request->add_pay_rate,
             'sia_number' => $request->add_sia_number,
+            'sia_role' => $request->add_sia_role,
+            'sia_licence_sector' => $request->add_sia_licence_sector,
+            'sia_expiry_date' => Carbon::parse($request->add_sia_expiry_date),
             'is_active' => $request->add_is_active == 'on' ? 1 : 0,
         ];
 
@@ -146,6 +149,9 @@ class StaffController extends Controller
         $staff->email = $request->edit_email;
         $staff->pay_rate = $request->edit_pay_rate;
         $staff->sia_number = $request->edit_sia_number;
+        $staff->sia_role = $request->edit_sia_role;
+        $staff->sia_licence_sector = $request->edit_sia_licence_sector;
+        $staff->sia_expiry_date = Carbon::parse($request->edit_sia_expiry_date);
         $staff->is_active = $request->edit_is_active == 'on' ? 1 : 0;
 
         if ($request->hasFile('edit_profile_path')) {
@@ -214,6 +220,7 @@ class StaffController extends Controller
             8 => 'postal_code',
             9 => 'city',
             10 => 'country',
+            11 => 'sia_expiry_date',
         );
         $totalData = Staff::count();
         $totalFiltered = $totalData;
@@ -265,6 +272,7 @@ class StaffController extends Controller
                 $nestedData['email'] = $row->email;
                 $nestedData['pay_rate'] = $row->pay_rate;
                 $nestedData['sia_number'] = $row->sia_number;
+                $nestedData['sia_expiry_date'] = $row->sia_expiry_date;
                 $nestedData['is_active'] = $row->is_active == 1 ? "Active" : "Disabled";
 
                 $id = $row->id;
@@ -338,5 +346,10 @@ class StaffController extends Controller
         }
         $response = array('status' => 'error', 'message' => 'Data Not Deleted Successful');
         return response()->json($response, 403);
+    }
+
+    public function verify_sia(Request $request){
+        return file_get_contents('https://acubepk.com/siachecker.php?LicenseNo='.$request->LicenseNo);
+
     }
 }

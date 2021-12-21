@@ -536,10 +536,35 @@
             $('#edit_country').val(data.country);
             $('#edit_address').val(data.address);
             $('#old_profile_path').val(data.profile_path);
-            $('#img_div').html('<img src="' + data.profile_url + '" alt="" style="height: 200px"/>');
+            $('#img_div').html('<img src="' + data.profile_url + '" alt="" style="height: 200px;margin-bottom:10px;"/>');
             $('#hidden_id').val(data.id);
             $('#edit_modal').modal('show');
         });
+        //Image preview
+        $("#edit_profile_path").on('change', function (){
+            var img_path = $(this)[0].value;
+            var img_holder = $('#img_div');
+            var extension = img_path.substring(img_path.lastIndexOf('.')+1).toLowerCase();
+            console.log(extension);
+            if(extension == 'jpeg' || extension == 'jpg' || extension == 'png'){
+                if(typeof(FileReader) != 'undefined'){
+                    img_holder.empty();
+                    var reader = new FileReader();
+
+                    reader.onload = function(e){
+                        $('<img/>',{'src':e.target.result,'class':'img-fluid','style':'height: 200px;margin-bottom:10px;'}).appendTo(img_holder);
+                    }
+                    img_holder.show();
+                    reader.readAsDataURL($(this)[0].files[0]);
+                }else{
+                    $(img_holder).html('This browser does not support FileReader');
+                }
+            }else{
+                $(img_holder).empty();
+            }
+        })
+
+
 
         $(document).on('submit', '.delete_form', function (e) {
             e.preventDefault();
